@@ -1,0 +1,69 @@
+{
+	"folders": [
+		{
+			"path": "../../project-m1-htmlcss"
+		},
+		{
+			"path": "../../project-m2-nyan-cat"
+		},
+		{
+			"name": "m4-1-node--introduction",
+			"path": "../../m4-1-node--introduction"
+		},
+		{
+			"name": "-m4-2-node--url-params",
+			"path": "../../-m4-2-node--url-params"
+		},
+		{
+			"name": "-m4-3-node--http-methods",
+			"path": "../../-m4-3-node--http-methods"
+		},
+		{
+			"name": "m4-4-node--promises",
+			"path": "../../m4-4-node--promises"
+		},
+		{
+			"name": "m4-5-node--async-await",
+			"path": "../../m4-5-node--async-await"
+		},
+		{
+			"name": "m4-6-node--rest-apis",
+			"path": "../../m4-6-node--rest-apis"
+		},
+		{
+			"name": "project-m4-slingair",
+			"path": "../../project-m4-slingair"
+		},
+		{
+			"name": "m5-1-react--effects",
+			"path": "../../m5-1-react--effects"
+		},
+		{
+			"name": "m5-2-react--context",
+			"path": "../../m5-2-react--context"
+		},
+		{
+			"name": "m5-3-react--whimsy",
+			"path": "../../m5-3-react--whimsy"
+		},
+		{
+			"name": "project-m5-twitter-clone",
+			"path": "../../project-m5-twitter-clone"
+		},
+		{
+			"name": "-m6-1-react--reducers",
+			"path": "../../-m6-1-react--reducers"
+		},
+		{
+			"name": "-m6-2-react--redux-introduction",
+			"path": "../../-m6-2-react--redux-introduction"
+		},
+		{
+			"name": "m6-3-react--redux-continued",
+			"path": "../../m6-3-react--redux-continued"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "m1-3-htmlcss--css-page-layout-1"
+	}
+}
