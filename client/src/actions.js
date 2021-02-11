@@ -17,9 +17,9 @@ export const requestLocationFilters = () => ({
   type: 'REQUEST_LOCATION_FILTERS'
 });
 
-export const receiveLocationFilters = (locationFilters) => ({
+export const receiveLocationFilters = (filters) => ({
   type: 'RECEIVE_LOCATION_FILTERS',
-  locationFilters
+  filters
 });
 
 export const receiveLocationFiltersError = () => ({
@@ -31,9 +31,10 @@ export const requestProducts = () => ({
   type: 'REQUEST_PRODUCTS',
 });
 
-export const receiveProducts = (products) => ({
+export const receiveProducts = (data) => ({
   type: 'RECEIVE_PRODUCTS',
-  products
+  products: data.products,
+  numProducts: data.numProducts
 });
 
 export const receiveProductsError = () => ({

@@ -33,10 +33,12 @@ function App() {
 
 const Wrapper = styled.div`
   display: grid;
+  grid-template-columns: minmax(180px, 1fr) 4fr;
+  grid-template-rows: 60px 60px 4fr;
   grid-template-areas:
-    'header header header header header'
-    'sidebar subheader subheader subheader subheader'
-    'sidebar main main main main'
+    'header header'
+    'sidebar subheader'
+    'sidebar main'
 `;
 
 const Header = styled.div`
@@ -44,7 +46,6 @@ const Header = styled.div`
   padding: 10px;
   color: white;
   background-color: #404040;
-  /* border: 1px solid red; */
 `;
 
 const Logo = styled.span`
@@ -61,20 +62,20 @@ const Slogan = styled.span`
 
 const Sidebar = styled.div`
   grid-area: sidebar;
-  padding: 20px;
-  border: 1px solid red;
+  height: 100vh;
+  padding: 5px;
+  border-right: 1px solid #dddddd
 `;
 
 const SubHeader = styled.div`
   grid-area: subheader;
-  padding: 20px;
-  border: 1px solid red;
+  padding: 5px;
+  border-bottom: 1px solid #dddddd;
 `;
 
 const ProductGridContainer = styled.div`
   grid-area: main;
-  padding: 20px;
-  border: 1px solid red;
+  padding: 5px;
 `;
 
 export default App;

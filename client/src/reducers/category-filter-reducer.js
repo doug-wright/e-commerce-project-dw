@@ -1,6 +1,5 @@
 const initialState = {
   filters: null,
-  selectedFilters: null,
   status: 'loading',
   error: null
 };
@@ -15,10 +14,13 @@ const categoryFilterReducer = (state = initialState, action) => {
     }
 
     case 'RECEIVE_CATEGORY_FILTERS': {
-      console.log(action);
+      const filters = action.filters.map(filter => {
+        return { name: filter, selected: false }
+      });
+
       return {
         ...state,
-        filters: action.filters,
+        filters: filters,
         status: 'idle'
       };
     }

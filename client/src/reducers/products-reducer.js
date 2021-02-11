@@ -1,8 +1,8 @@
-const ITEMS_PER_PAGE = 9;
-
 const initialState = {
   products: null,
   index: 0,
+  itemsPerPage: 9,
+  numProducts: 0,
   status: 'loading',
   error: null
 };
@@ -20,6 +20,7 @@ const productsReducer = (state = initialState, action) => {
       return {
         ...state,
         products: action.products,
+        numProducts: action.numProducts,
         status: 'idle'
       };
     }
@@ -35,7 +36,7 @@ const productsReducer = (state = initialState, action) => {
       return {
         ...state,
         status: 'loading',
-        index: state.index + ITEMS_PER_PAGE
+        index: state.index + state.itemsPerPage
       };
     }
 
@@ -58,7 +59,7 @@ const productsReducer = (state = initialState, action) => {
       return {
         ...state,
         status: 'loading',
-        index: state.index - ITEMS_PER_PAGE
+        index: state.index - state.itemsPerPage
       };
     }
 

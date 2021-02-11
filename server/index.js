@@ -117,22 +117,22 @@ express()
     }
   })
 
-  // Get product by id
-  .get('/api/v1/product/:id', async (req, res) => {
+  // Get product by index
+  .get('/api/v1/product/index/:fromIndex/:quantity', async (req, res) => {
     try {
-      const response = await getProductById(req.params.id);
-
+      const response = await getProductByIndex(req.params.fromIndex, req.params.quantity);
+  
       res.status(200).json({ status: 200, data: response });
     } catch (err) {
       res.status(400).json({ status: 400, data: { request: err.request, message: err.message }});
     }
   })
 
-  // Get product by index
-  .get('/api/v1/product/index/:fromIndex', async (req, res) => {
+  // Get product by id
+  .get('/api/v1/product/:id', async (req, res) => {
     try {
-      const response = await getProductByIndex(req.params.fromIndex);
-  
+      const response = await getProductById(req.params.id);
+
       res.status(200).json({ status: 200, data: response });
     } catch (err) {
       res.status(400).json({ status: 400, data: { request: err.request, message: err.message }});

@@ -103,7 +103,7 @@ const getProductById = (id) => {
 };
 
 // Get product by index
-const getProductByIndex = (fromIndex) => {
+const getProductByIndex = (fromIndex, quantity) => {
   return new Promise((resolve, reject) => {
     const numProducts = products.length;
 
@@ -116,9 +116,9 @@ const getProductByIndex = (fromIndex) => {
     }
 
     const productRange = [];
-    let toIndex = fromIndex + 10;
+    let toIndex = fromIndex + quantity;
   
-    if (toIndex > numProducts - 1) {
+    if (toIndex > numProducts) {
       toIndex = numProducts -1;
     }
 
@@ -127,11 +127,11 @@ const getProductByIndex = (fromIndex) => {
         name: products[i].name,
         price: products[i].price,
         imageSrc: products[i].imageSrc,
-        numInStock: products[i].numInStock
+        numInStock: products[i].numInStock,
       });
     }
 
-    resolve({ products: productRange });
+    resolve({ products: productRange, numProducts });
   });
 };
 
