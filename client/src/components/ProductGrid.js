@@ -45,7 +45,7 @@ const ProductGrid = () => {
             <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
           </Pager>
           <GridContainer>
-            {products.products.map(product => <ProductItemSummary product={product} />)}
+            {products.products.map(product => <ProductItemSummary key={product._id} product={product} />)}
           </GridContainer>
           <Pager>
             <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>

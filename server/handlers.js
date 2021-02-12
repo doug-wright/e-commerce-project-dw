@@ -124,6 +124,7 @@ const getProductByIndex = (fromIndex, quantity) => {
 
     for (let i = fromIndex; i <= toIndex; i++) {
       productRange.push({
+        _id: products[i]._id,
         name: products[i].name,
         price: products[i].price,
         imageSrc: products[i].imageSrc,

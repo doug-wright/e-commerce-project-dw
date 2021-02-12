@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
@@ -8,7 +9,9 @@ import {
   receiveCategoryFiltersError,
   requestLocationFilters,
   receiveLocationFilters,
-  receiveLocationFiltersError
+  receiveLocationFiltersError,
+  toggleCategoryFilter,
+  toggleLocationFilter
 } from '../actions';
 
 const FilterSelect = () => {
@@ -33,13 +36,11 @@ const FilterSelect = () => {
   }, []);
 
   const handleCategorySelect = (ev) => {
-    console.log(ev.target.id);
-    console.log(ev.target.checked);
+    dispatch(toggleCategoryFilter(ev.target.id));
   };
 
   const handleLocationSelect = (ev) => {
-    console.log(ev.target.id);
-    console.log(ev.target.checked);
+    dispatch(toggleLocationFilter(ev.target.id));
   };
 
   if (categoryFilter.status === 'loading' || locationFilter.status === 'loading') {
@@ -49,23 +50,23 @@ const FilterSelect = () => {
       <>
         <FilterTitle>Filters</FilterTitle>
         <p>Categories:</p>
-        {categoryFilter.filters.map((filter, index) => {
+        {Object.keys(categoryFilter.filters).map((filterName, index) => {
           return (
-            <>
-              <input type="checkbox" onClick={handleCategorySelect} id={filter.name} name={filter.name} />
-              <label htmlFor={filter.name}>{filter.name}</label>
+            <Fragment key={'category' + index}>
+              <input type="checkbox" onClick={handleCategorySelect} id={filterName} name={filterName} />
+              <label htmlFor={filterName}>{filterName}</label>
               <br />
-            </>
+            </Fragment>
           );
         })}
         <p>Locations:</p>
-        {locationFilter.filters.map((filter, index) => {
+        {Object.keys(locationFilter.filters).map((filterName, index) => {
           return (
-            <>
-              <input type="checkbox" onClick={handleLocationSelect} id={filter.name} name={filter.name} />
-              <label htmlFor={filter.name}>{filter.name}</label>
+            <Fragment key={'location' + index}>
+              <input type="checkbox" onClick={handleLocationSelect} id={filterName} name={filterName} />
+              <label htmlFor={filterName}>{filterName}</label>
               <br />
-            </>
+            </Fragment>
           );
         })}
       </>

@@ -14,8 +14,13 @@ const categoryFilterReducer = (state = initialState, action) => {
     }
 
     case 'RECEIVE_CATEGORY_FILTERS': {
-      const filters = action.filters.map(filter => {
-        return { name: filter, selected: false }
+      // const filters = action.filters.map(filter => {
+      //   return { name: filter, selected: false }
+      // });
+      const filters = {};
+
+      action.filters.forEach(filter => {
+        filters[filter] = false;
       });
 
       return {
@@ -28,6 +33,22 @@ const categoryFilterReducer = (state = initialState, action) => {
     case 'RECEIVE_CATEGORY_FILTERS_ERROR': {
       return {
         ...state,
+        status: 'error'
+      };
+    }
+
+    case 'TOGGLE_CATEGORY_FILTER': {
+      let filterStatus = false;
+
+      if (state.filters[action.filterName] === false) {
+        filterStatus = true;
+      } else {
+        filterStatus = false;
+      }
+
+      return {
+        ...state,
+        filters: {...state.filters, [action.filterName]: filterStatus},
         status: 'error'
       };
     }

@@ -12,6 +12,11 @@ export const receiveCategoryFiltersError = () => ({
   type: 'RECEIVE_CATEGORY_FILTERS_ERROR',
 });
 
+export const toggleCategoryFilter = (filterName) => ({
+  type: 'TOGGLE_CATEGORY_FILTER',
+  filterName
+});
+
 // Body location filter actions
 export const requestLocationFilters = () => ({
   type: 'REQUEST_LOCATION_FILTERS'
@@ -24,6 +29,11 @@ export const receiveLocationFilters = (filters) => ({
 
 export const receiveLocationFiltersError = () => ({
   type: 'RECEIVE_LOCATION_FILTERS_ERROR',
+});
+
+export const toggleLocationFilter = (filterName) => ({
+  type: 'TOGGLE_LOCATION_FILTER',
+  filterName
 });
 
 // Initial product summary actions
