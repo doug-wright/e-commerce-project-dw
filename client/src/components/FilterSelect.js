@@ -11,7 +11,8 @@ import {
   receiveLocationFilters,
   receiveLocationFiltersError,
   toggleCategoryFilter,
-  toggleLocationFilter
+  toggleLocationFilter,
+  setUrl
 } from '../actions';
 
 const FilterSelect = () => {
@@ -35,12 +36,20 @@ const FilterSelect = () => {
       .catch((err) => dispatch(receiveLocationFiltersError()));
   }, []);
 
-  const handleCategorySelect = (ev) => {
-    dispatch(toggleCategoryFilter(ev.target.id));
-  };
+  // const handleCategorySelect = (ev) => {
+  //   dispatch(toggleCategoryFilter(ev.target.id));
+  // };
 
-  const handleLocationSelect = (ev) => {
-    dispatch(toggleLocationFilter(ev.target.id));
+  // const handleLocationSelect = (ev) => {
+  //   dispatch(toggleLocationFilter(ev.target.id));
+  // };
+
+  const handleApplyFilters = () => {
+    if (Object.values(categoryFilter.filters).every(value => value === false) && Object.values(locationFilter.filters).every(value => value === false)) {
+      console.log('no filters set');
+    } else {
+      dispatch(setUrl('http://localhost:4000/api/v1/product/index/9/9'));
+    }
   };
 
   if (categoryFilter.status === 'loading' || locationFilter.status === 'loading') {
@@ -53,7 +62,7 @@ const FilterSelect = () => {
         {Object.keys(categoryFilter.filters).map((filterName, index) => {
           return (
             <Fragment key={'category' + index}>
-              <input type="checkbox" onClick={handleCategorySelect} id={filterName} name={filterName} />
+              <input type="checkbox" onClick={(ev) => dispatch(toggleCategoryFilter(ev.target.id))} id={filterName} name={filterName} />
               <label htmlFor={filterName}>{filterName}</label>
               <br />
             </Fragment>
@@ -63,12 +72,13 @@ const FilterSelect = () => {
         {Object.keys(locationFilter.filters).map((filterName, index) => {
           return (
             <Fragment key={'location' + index}>
-              <input type="checkbox" onClick={handleLocationSelect} id={filterName} name={filterName} />
+              <input type="checkbox" onClick={(ev) => dispatch(toggleLocationFilter(ev.target.id))} id={filterName} name={filterName} />
               <label htmlFor={filterName}>{filterName}</label>
               <br />
             </Fragment>
           );
         })}
+        <button onClick={handleApplyFilters}>Apply Filters</button>
       </>
     );
   }

@@ -36,7 +36,7 @@ export const toggleLocationFilter = (filterName) => ({
   filterName
 });
 
-// Initial product summary actions
+// Product actions
 export const requestProducts = () => ({
   type: 'REQUEST_PRODUCTS',
 });
@@ -51,12 +51,15 @@ export const receiveProductsError = () => ({
   type: 'RECEIVE_PRODUCTS_ERROR'
 });
 
-// Next page of products
 export const requestProductsNext = () => ({
   type: 'REQUEST_PRODUCTS_NEXT'
 });
 
-// Previous page of products
 export const requestProductsBack = () => ({
   type: 'REQUEST_PRODUCTS_BACK'
+});
+
+export const setUrl = (url) => ({
+  type: 'SET_URL',
+  url
 });

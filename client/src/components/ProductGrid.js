@@ -10,7 +10,7 @@ import {
   receiveProducts,
   receiveProductsError,
   requestProductsNext,
-  requestProductsBack
+  requestProductsBack,
 } from '../actions';
 
 const ProductGrid = () => {
@@ -19,10 +19,9 @@ const ProductGrid = () => {
   const locationFilter = useSelector((state) => state.locationFilter);
   const products = useSelector((state) => state.products);
 
-  // Fetch products based on filter selections
   useEffect(() => {
     dispatch(requestProducts());
-    fetch('http://localhost:4000/api/v1/product/index/' + products.index + '/' + (products.itemsPerPage))
+    fetch('http://localhost:4000/api/v1/product/index/' + products.index + '/' + products.itemsPerPage)
       .then((res) => res.json())
       .then((json) => dispatch(receiveProducts(json.data)))
       .catch((err) => dispatch(receiveProductsError()));
@@ -39,9 +38,9 @@ const ProductGrid = () => {
         <Wrapper>
           <Pager>
             <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
-            {products.index + 1} to{' '}
+            Showing products {products.index + 1} to{' '}
             {(products.index + products.itemsPerPage < products.numProducts) ? products.index + products.itemsPerPage : products.numProducts} of{' '}
-            {products.numProducts}
+            {products.numProducts} in total
             <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
           </Pager>
           <GridContainer>
@@ -49,9 +48,9 @@ const ProductGrid = () => {
           </GridContainer>
           <Pager>
             <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
-            {products.index + 1} to{' '}
+            Showing products {products.index + 1} to{' '}
             {(products.index + products.itemsPerPage < products.numProducts) ? products.index + products.itemsPerPage : products.numProducts} of{' '}
-            {products.numProducts}
+            {products.numProducts} in total
             <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
           </Pager>
         </Wrapper>

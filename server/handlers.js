@@ -102,6 +102,11 @@ const getProductById = (id) => {
   });
 };
 
+// Get products by filters
+const getProductByFilters = (queryString) => {
+  console.log(queryString);
+};
+
 // Get product by index
 const getProductByIndex = (fromIndex, quantity) => {
   return new Promise((resolve, reject) => {
@@ -145,5 +150,6 @@ module.exports = {
   getProductBodyLocations,
   getProductsByBodyLocation,
   getProductById,
+  getProductByFilters,
   getProductByIndex
 };

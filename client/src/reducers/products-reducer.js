@@ -4,7 +4,7 @@ const initialState = {
   itemsPerPage: 9,
   numProducts: 0,
   status: 'loading',
-  error: null
+  error: null,
 };
 
 const productsReducer = (state = initialState, action) => {
@@ -54,6 +54,13 @@ const productsReducer = (state = initialState, action) => {
       } else {
         return state;
       }
+    }
+
+    case 'SET_URL': {
+      return {
+        ...state,
+        url: action.url
+      };
     }
 
     default:

@@ -15,6 +15,7 @@ const {
   getProductBodyLocations,
   getProductsByBodyLocation,
   getProductById,
+  getProductByFilters,
   getProductByIndex
 } = require('./handlers');
 const { response } = require('express');
@@ -110,6 +111,17 @@ express()
   .get('/api/v1/product/location/:bodyLocation', async (req, res) => {
     try {
       const response = await getProductsByBodyLocation(req.params.bodyLocation);
+  
+      res.status(200).json({ status: 200, data: response });
+    } catch (err) {
+      res.status(400).json({ status: 400, data: { request: err.request, message: err.message }});
+    }
+  })
+
+  // Get products by filters
+  .get('/api/v1/product/filter', async (req, res) => {
+    try {
+      const response = await getProductByFilters(req.query);
   
       res.status(200).json({ status: 200, data: response });
     } catch (err) {
