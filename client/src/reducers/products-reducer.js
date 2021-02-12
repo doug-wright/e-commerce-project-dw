@@ -33,49 +33,27 @@ const productsReducer = (state = initialState, action) => {
     }
 
     case 'REQUEST_PRODUCTS_NEXT': {
-      return {
-        ...state,
-        status: 'loading',
-        index: state.index + state.itemsPerPage
-      };
-    }
-
-    case 'RECEIVE_PRODUCTS_NEXT': {
-      return {
-        ...state,
-        products: action.products,
-        status: 'idle'
-      };
-    }
-
-    case 'RECEIVE_PRODUCTS_NEXT_ERROR': {
-      return {
-        ...state,
-        status: 'error'
-      };
+      if (state.index + state.itemsPerPage < state.numProducts) {
+        return {
+          ...state,
+          status: 'loading',
+          index: state.index + state.itemsPerPage
+        };
+      } else {
+        return state;
+      }
     }
 
     case 'REQUEST_PRODUCTS_BACK': {
-      return {
-        ...state,
-        status: 'loading',
-        index: state.index - state.itemsPerPage
-      };
-    }
-
-    case 'RECEIVE_PRODUCTS_BACK': {
-      return {
-        ...state,
-        products: action.products,
-        status: 'idle'
-      };
-    }
-
-    case 'RECEIVE_PRODUCTS_BACK_ERROR': {
-      return {
-        ...state,
-        status: 'error'
-      };
+      if (state.index > 0) {
+        return {
+          ...state,
+          status: 'loading',
+          index: state.index - state.itemsPerPage
+        };
+      } else {
+        return state;
+      }
     }
 
     default:

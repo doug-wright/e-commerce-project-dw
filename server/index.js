@@ -120,7 +120,7 @@ express()
   // Get product by index
   .get('/api/v1/product/index/:fromIndex/:quantity', async (req, res) => {
     try {
-      const response = await getProductByIndex(req.params.fromIndex, req.params.quantity);
+      const response = await getProductByIndex(Number(req.params.fromIndex), Number(req.params.quantity));
   
       res.status(200).json({ status: 200, data: response });
     } catch (err) {

@@ -8,7 +8,9 @@ import ProductItemSummary from './ProductItemSummary';
 import {
   requestProducts,
   receiveProducts,
-  receiveProductsError
+  receiveProductsError,
+  requestProductsNext,
+  requestProductsBack
 } from '../actions';
 
 const ProductGrid = () => {
@@ -20,11 +22,11 @@ const ProductGrid = () => {
   // Fetch products based on filter selections
   useEffect(() => {
     dispatch(requestProducts());
-    fetch('http://localhost:4000/api/v1/product/index/' + products.index + '/' + (products.itemsPerPage - 1))
+    fetch('http://localhost:4000/api/v1/product/index/' + products.index + '/' + (products.itemsPerPage))
       .then((res) => res.json())
       .then((json) => dispatch(receiveProducts(json.data)))
       .catch((err) => dispatch(receiveProductsError()));
-  },[]);
+  },[products.index]);
 
   if (products.status === 'loading') {
     return (
@@ -35,10 +37,23 @@ const ProductGrid = () => {
     } else {
       return (
         <Wrapper>
-          <Pager><LeftArrow />{products.index + 1} to {products.itemsPerPage} of {products.numProducts}<RightArrow /></Pager>
+          <Pager>
+            <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
+            {products.index + 1} to{' '}
+            {(products.index + products.itemsPerPage < products.numProducts) ? products.index + products.itemsPerPage : products.numProducts} of{' '}
+            {products.numProducts}
+            <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
+          </Pager>
           <GridContainer>
             {products.products.map(product => <ProductItemSummary product={product} />)}
           </GridContainer>
+          <Pager>
+            <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
+            {products.index + 1} to{' '}
+            {(products.index + products.itemsPerPage < products.numProducts) ? products.index + products.itemsPerPage : products.numProducts} of{' '}
+            {products.numProducts}
+            <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
+          </Pager>
         </Wrapper>
       );
     }
@@ -57,6 +72,12 @@ const Pager = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 20px;
+`;
+
+const Button = styled.button`
+  border: none;
+  outline: none;
+  background-color: transparent;
 `;
 
 const LeftArrow = styled(FiArrowLeftCircle)`

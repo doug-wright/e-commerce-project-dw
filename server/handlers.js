@@ -116,9 +116,9 @@ const getProductByIndex = (fromIndex, quantity) => {
     }
 
     const productRange = [];
-    let toIndex = fromIndex + quantity;
+    let toIndex = fromIndex + quantity - 1;
   
-    if (toIndex > numProducts) {
+    if (toIndex >= numProducts) {
       toIndex = numProducts -1;
     }
 

@@ -41,30 +41,12 @@ export const receiveProductsError = () => ({
   type: 'RECEIVE_PRODUCTS_ERROR'
 });
 
-// Next page product summary actions
+// Next page of products
 export const requestProductsNext = () => ({
   type: 'REQUEST_PRODUCTS_NEXT'
 });
 
-export const receiveProductsNext = (products) => ({
-  type: 'RECEIVE_PRODUCTS_NEXT',
-  products
-});
-
-export const receiveProductsNextError = () => ({
-  type: 'RECEIVE_PRODUCTS_NEXT_ERROR'
-});
-
-// Previous page product summary actions
+// Previous page of products
 export const requestProductsBack = () => ({
   type: 'REQUEST_PRODUCTS_BACK'
-});
-
-export const receiveProductsBack = (products) => ({
-  type: 'RECEIVE_PRODUCTS_BACK',
-  products
-});
-
-export const receiveProductsBackError = () => ({
-  type: 'RECEIVE_PRODUCTS_BACK_ERROR'
 });
