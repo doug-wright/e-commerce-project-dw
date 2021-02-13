@@ -103,7 +103,9 @@ const getProductById = (id) => {
 };
 
 // Get products by filters
-const getProductByFilters = (queryString) => {
+const getProductByFilters = (fromIndex, quantity, queryString) => {
+  console.log(fromIndex);
+  console.log(quantity);
   console.log(queryString);
 };
 

@@ -21,11 +21,11 @@ const ProductGrid = () => {
 
   useEffect(() => {
     dispatch(requestProducts());
-    fetch('http://localhost:4000/api/v1/product/index/' + products.index + '/' + products.itemsPerPage)
+    fetch(products.url + products.index + '/' + products.itemsPerPage + products.queryString)
       .then((res) => res.json())
       .then((json) => dispatch(receiveProducts(json.data)))
       .catch((err) => dispatch(receiveProductsError()));
-  },[products.index]);
+  },[products.url, products.index, products.queryString]);
 
   if (products.status === 'loading') {
     return (

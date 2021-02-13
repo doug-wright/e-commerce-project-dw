@@ -12,6 +12,8 @@ import {
   receiveLocationFiltersError,
   toggleCategoryFilter,
   toggleLocationFilter,
+  clearCategoryFilters,
+  clearLocationFilters,
   setUrl
 } from '../actions';
 
@@ -45,11 +47,41 @@ const FilterSelect = () => {
   // };
 
   const handleApplyFilters = () => {
+    let categories = '';
+    let locations = '';
+    let queryString = '';
+
     if (Object.values(categoryFilter.filters).every(value => value === false) && Object.values(locationFilter.filters).every(value => value === false)) {
       console.log('no filters set');
     } else {
-      dispatch(setUrl('http://localhost:4000/api/v1/product/index/9/9'));
+      Object.keys(categoryFilter.filters).forEach(filterName => {
+        if (categoryFilter.filters[filterName]) {
+          categories += filterName + ',';
+        }
+      });
+
+      Object.keys(locationFilter.filters).forEach(filterName => {
+        if (locationFilter.filters[filterName]) {
+          locations += filterName + ',';
+        }
+      });
+      
+      if (categories.length !== 0 && locations.length !== 0) {
+        queryString = '?categores=' + categories + '&locations=' + locations;
+      } else if (categories.length !== 0) {
+        queryString = '?categories=' + categories;
+      } else {
+        queryString = '?locations=' + locations;
+      }
+
+      dispatch(setUrl('http://localhost:4000/api/v1/product/filter/', queryString));
     }
+  };
+
+  const handleClearFilters = () => {
+    dispatch(clearCategoryFilters());
+    dispatch(clearLocationFilters());
+    dispatch(setUrl('http://localhost:4000/api/v1/product/index/', ''));
   };
 
   if (categoryFilter.status === 'loading' || locationFilter.status === 'loading') {
@@ -60,9 +92,17 @@ const FilterSelect = () => {
         <FilterTitle>Filters</FilterTitle>
         <p>Categories:</p>
         {Object.keys(categoryFilter.filters).map((filterName, index) => {
+          const checked = categoryFilter.filters[filterName] ? true : false;
+
           return (
             <Fragment key={'category' + index}>
-              <input type="checkbox" onClick={(ev) => dispatch(toggleCategoryFilter(ev.target.id))} id={filterName} name={filterName} />
+              <input
+                type="checkbox"
+                onChange={(ev) => dispatch(toggleCategoryFilter(ev.target.id))}
+                id={filterName}
+                name={filterName}
+                checked={checked}
+              />
               <label htmlFor={filterName}>{filterName}</label>
               <br />
             </Fragment>
@@ -70,15 +110,24 @@ const FilterSelect = () => {
         })}
         <p>Locations:</p>
         {Object.keys(locationFilter.filters).map((filterName, index) => {
+          const checked = locationFilter.filters[filterName] ? true : false;
+
           return (
             <Fragment key={'location' + index}>
-              <input type="checkbox" onClick={(ev) => dispatch(toggleLocationFilter(ev.target.id))} id={filterName} name={filterName} />
+              <input
+                type="checkbox"
+                onChange={(ev) => dispatch(toggleLocationFilter(ev.target.id))}
+                id={filterName}
+                name={filterName}
+                checked={checked}
+              />
               <label htmlFor={filterName}>{filterName}</label>
               <br />
             </Fragment>
           );
         })}
         <button onClick={handleApplyFilters}>Apply Filters</button>
+        <button onClick={handleClearFilters}>Clear Filters</button>
       </>
     );
   }

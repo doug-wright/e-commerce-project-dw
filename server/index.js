@@ -119,9 +119,9 @@ express()
   })
 
   // Get products by filters
-  .get('/api/v1/product/filter', async (req, res) => {
+  .get('/api/v1/product/filter/:fromIndex/:quantity', async (req, res) => {
     try {
-      const response = await getProductByFilters(req.query);
+      const response = await getProductByFilters(Number(req.params.fromIndex), Number(req.params.quantity), req.query);
   
       res.status(200).json({ status: 200, data: response });
     } catch (err) {

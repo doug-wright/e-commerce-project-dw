@@ -1,4 +1,6 @@
 const initialState = {
+  url: 'http://localhost:4000/api/v1/product/index/',
+  queryString: '',
   products: null,
   index: 0,
   itemsPerPage: 9,
@@ -59,7 +61,10 @@ const productsReducer = (state = initialState, action) => {
     case 'SET_URL': {
       return {
         ...state,
-        url: action.url
+        url: action.url,
+        queryString: action.queryString,
+        index: 0,
+        itemsPerPage: 9
       };
     }
 

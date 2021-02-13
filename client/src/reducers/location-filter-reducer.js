@@ -53,6 +53,18 @@ const locationFilterReducer = (state = initialState, action) => {
       };
     }
 
+    case 'CLEAR_LOCATION_FILTERS': {
+      let newFilter = {};
+      Object.keys(state.filters).forEach(key => {
+        newFilter[key] = false;
+      });
+
+      return {
+        ...state,
+        filters: newFilter
+      }
+    }
+
     default:
       return state;
   }

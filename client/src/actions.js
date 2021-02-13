@@ -36,6 +36,14 @@ export const toggleLocationFilter = (filterName) => ({
   filterName
 });
 
+export const clearCategoryFilters = () => ({
+  type: 'CLEAR_CATEGORY_FILTERS',
+});
+
+export const clearLocationFilters = () => ({
+  type: 'CLEAR_LOCATION_FILTERS',
+});
+
 // Product actions
 export const requestProducts = () => ({
   type: 'REQUEST_PRODUCTS',
@@ -59,7 +67,8 @@ export const requestProductsBack = () => ({
   type: 'REQUEST_PRODUCTS_BACK'
 });
 
-export const setUrl = (url) => ({
+export const setUrl = (url, queryString) => ({
   type: 'SET_URL',
-  url
+  url,
+  queryString
 });

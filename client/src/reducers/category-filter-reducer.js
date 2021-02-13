@@ -53,6 +53,18 @@ const categoryFilterReducer = (state = initialState, action) => {
       };
     }
 
+    case 'CLEAR_CATEGORY_FILTERS': {
+      let newFilter = {};
+      Object.keys(state.filters).forEach(key => {
+        newFilter[key] = false;
+      });
+
+      return {
+        ...state,
+        filters: newFilter
+      }
+    }
+
     default:
       return state;
   }
