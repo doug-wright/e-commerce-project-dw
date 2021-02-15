@@ -67,7 +67,7 @@ const FilterSelect = () => {
       });
       
       if (categories.length !== 0 && locations.length !== 0) {
-        queryString = '?categores=' + categories + '&locations=' + locations;
+        queryString = '?categories=' + categories + '&locations=' + locations;
       } else if (categories.length !== 0) {
         queryString = '?categories=' + categories;
       } else {

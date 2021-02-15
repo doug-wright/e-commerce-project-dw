@@ -104,9 +104,63 @@ const getProductById = (id) => {
 
 // Get products by filters
 const getProductByFilters = (fromIndex, quantity, queryString) => {
-  console.log(fromIndex);
-  console.log(quantity);
-  console.log(queryString);
+  return new Promise((resolve, reject) => {
+    let productsArray = [];
+    let categoriesArray = [];
+    let locationsArray = [];
+
+    // Populate categories array
+    if (queryString.hasOwnProperty('categories')) {
+      categoriesArray = queryString.categories.split(',');
+      categoriesArray.pop();
+      console.log(categoriesArray);
+    }
+
+    // Populate locations array
+    if (queryString.hasOwnProperty('locations')) {
+      locationsArray = queryString.locations.split(',');
+      locationsArray.pop();
+      console.log(locationsArray);
+    }
+
+    for (let i = 0; i < products.length; i++) {
+      if (categoriesArray.includes(products[i].category) && locationsArray.includes(products[i].body_location)) {
+        productsArray.push(products[i]);
+      } else if (categoriesArray.includes(products[i].category) || locationsArray.includes(products[i].body_location)) {
+        productsArray.push(products[i]);
+      }
+    }
+
+    const numProducts = productsArray.length;
+
+    if (fromIndex < 0) {
+      reject({ request: fromIndex, message: 'invalid index' });
+    }
+
+    if (fromIndex > numProducts - 1) {
+      reject({ request: fromIndex, message: 'index exceeds number of products' });
+    }
+
+    const productRange = [];
+    let toIndex = fromIndex + quantity - 1;
+  
+    if (toIndex >= numProducts) {
+      toIndex = numProducts -1;
+    }
+
+    for (let i = fromIndex; i <= toIndex; i++) {
+      productRange.push({
+        _id: productsArray[i]._id,
+        name: productsArray[i].name,
+        price: productsArray[i].price,
+        imageSrc: productsArray[i].imageSrc,
+        numInStock: productsArray[i].numInStock
+      });
+    }
+
+    resolve({ products: productRange, numProducts });
+  });
+
 };
 
 // Get product by index
@@ -135,7 +189,7 @@ const getProductByIndex = (fromIndex, quantity) => {
         name: products[i].name,
         price: products[i].price,
         imageSrc: products[i].imageSrc,
-        numInStock: products[i].numInStock,
+        numInStock: products[i].numInStock
       });
     }
 
