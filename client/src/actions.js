@@ -17,6 +17,10 @@ export const toggleCategoryFilter = (filterName) => ({
   filterName
 });
 
+export const clearCategoryFilters = () => ({
+  type: 'CLEAR_CATEGORY_FILTERS',
+});
+
 // Body location filter actions
 export const requestLocationFilters = () => ({
   type: 'REQUEST_LOCATION_FILTERS'
@@ -36,27 +40,23 @@ export const toggleLocationFilter = (filterName) => ({
   filterName
 });
 
-export const clearCategoryFilters = () => ({
-  type: 'CLEAR_CATEGORY_FILTERS',
-});
-
 export const clearLocationFilters = () => ({
   type: 'CLEAR_LOCATION_FILTERS',
 });
 
-// Product actions
-export const requestProducts = () => ({
-  type: 'REQUEST_PRODUCTS',
+// Product summary actions
+export const requestProductsSummary = () => ({
+  type: 'REQUEST_PRODUCTS_SUMMARY',
 });
 
-export const receiveProducts = (data) => ({
-  type: 'RECEIVE_PRODUCTS',
+export const receiveProductsSummary = (data) => ({
+  type: 'RECEIVE_PRODUCTS_SUMMARY',
   products: data.products,
   numProducts: data.numProducts
 });
 
-export const receiveProductsError = () => ({
-  type: 'RECEIVE_PRODUCTS_ERROR'
+export const receiveProductsSummaryError = () => ({
+  type: 'RECEIVE_PRODUCTS_SUMMARY_ERROR'
 });
 
 export const requestProductsNext = () => ({
@@ -71,4 +71,18 @@ export const setUrl = (url, queryString) => ({
   type: 'SET_URL',
   url,
   queryString
+});
+
+// Product detail actions
+export const requestProductDetail = () => ({
+  type: 'REQUEST_PRODUCT_DETAIL',
+});
+
+export const receiveProductDetail = (product) => ({
+  type: 'RECEIVE_PRODUCT_DETAIL',
+  product
+});
+
+export const receiveProductDetailError = () => ({
+  type: 'RECEIVE_PRODUCT_DETAIL_ERROR'
 });

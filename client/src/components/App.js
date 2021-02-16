@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
 import GlobalStyles from './GlobalStyles';
 import FilterSelect from './FilterSelect';
-import AppliedFilters from './AppliedFilters';
 import ProductGrid from './ProductGrid';
+import ProductDetail from './ProductDetail';
 
 function App() {
   return (
@@ -20,12 +19,21 @@ function App() {
         <Sidebar>
           <FilterSelect />
         </Sidebar>
-        <SubHeader>
-          <AppliedFilters />
-        </SubHeader>
-        <ProductGridContainer>
-          <ProductGrid />
-        </ProductGridContainer>
+        {/* <SubHeader> */}
+          {/* <AppliedFilters /> */}
+        {/* </SubHeader> */}
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <ProductGridContainer>
+                <ProductGrid />
+              </ProductGridContainer>
+            </Route>
+            <Route exact path="/product/:productId">
+              <ProductDetail />
+            </Route>
+          </Switch>
+        </Router>
       </Wrapper>
     </>
   );
@@ -33,11 +41,11 @@ function App() {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: minmax(180px, 1fr) 4fr;
+  grid-template-columns: minmax(185px, 1fr) 4fr;
   grid-template-rows: 60px 60px 4fr;
   grid-template-areas:
     'header header'
-    'sidebar subheader'
+    /* 'sidebar subheader' */
     'sidebar main'
 `;
 
@@ -48,9 +56,9 @@ const Header = styled.div`
   /* background-color: #404040; */
   /* background-color: #2f2fa2; */
   /* background-color: #242582; */
-  /* background-color: #5d5c61; */
+  background-color: #5d5c61;
   /* background-color: #557a95; */
-  background-color: #8265a7;
+  /* background-color: #8265a7; */
 `;
 
 const Logo = styled.span`
@@ -72,11 +80,11 @@ const Sidebar = styled.div`
   border-right: 1px solid #dddddd
 `;
 
-const SubHeader = styled.div`
+/* const SubHeader = styled.div`
   grid-area: subheader;
   padding: 5px;
   border-bottom: 1px solid #dddddd;
-`;
+`; */
 
 const ProductGridContainer = styled.div`
   grid-area: main;

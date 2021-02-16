@@ -36,15 +36,7 @@ const FilterSelect = () => {
       .then((res) => res.json())
       .then((json) => dispatch(receiveLocationFilters(json.data.bodyLocations)))
       .catch((err) => dispatch(receiveLocationFiltersError()));
-  }, []);
-
-  // const handleCategorySelect = (ev) => {
-  //   dispatch(toggleCategoryFilter(ev.target.id));
-  // };
-
-  // const handleLocationSelect = (ev) => {
-  //   dispatch(toggleLocationFilter(ev.target.id));
-  // };
+  }, [dispatch]);
 
   const handleApplyFilters = () => {
     let categories = '';
@@ -75,6 +67,7 @@ const FilterSelect = () => {
       }
 
       dispatch(setUrl('http://localhost:4000/api/v1/product/filter/', queryString));
+      window.scrollTo(0, 0);
     }
   };
 
@@ -96,15 +89,16 @@ const FilterSelect = () => {
 
           return (
             <Fragment key={'category' + index}>
-              <input
-                type="checkbox"
-                onChange={(ev) => dispatch(toggleCategoryFilter(ev.target.id))}
-                id={filterName}
-                name={filterName}
-                checked={checked}
-              />
-              <label htmlFor={filterName}>{filterName}</label>
-              <br />
+              <Filter>
+                <Input
+                  type="checkbox"
+                  onChange={(ev) => dispatch(toggleCategoryFilter(ev.target.id))}
+                  id={filterName}
+                  name={filterName}
+                  checked={checked}
+                />
+                <label htmlFor={filterName}>{filterName}</label>
+              </Filter>
             </Fragment>
           );
         })}
@@ -114,15 +108,16 @@ const FilterSelect = () => {
 
           return (
             <Fragment key={'location' + index}>
-              <input
-                type="checkbox"
-                onChange={(ev) => dispatch(toggleLocationFilter(ev.target.id))}
-                id={filterName}
-                name={filterName}
-                checked={checked}
-              />
-              <label htmlFor={filterName}>{filterName}</label>
-              <br />
+              <Filter>
+                <Input
+                  type="checkbox"
+                  onChange={(ev) => dispatch(toggleLocationFilter(ev.target.id))}
+                  id={filterName}
+                  name={filterName}
+                  checked={checked}
+                />
+                <label htmlFor={filterName}>{filterName}</label>
+              </Filter>
             </Fragment>
           );
         })}
@@ -136,6 +131,23 @@ const FilterSelect = () => {
 const FilterTitle = styled.div`
   text-align: center;
   font-weight: bold;
+`;
+
+const Filter = styled.div`
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  &:hover {
+    border: none;
+    border-radius: 3px;
+    background-color: #8265a7;
+    color: white;
+    font-weight: bold;
+  }
+`;
+
+const Input = styled.input`
+  margin-right: 5px;
 `;
 
 export default FilterSelect;

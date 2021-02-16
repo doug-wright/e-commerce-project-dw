@@ -3,31 +3,35 @@ import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 
-import ProductItemSummary from './ProductItemSummary';
+import ProductSummary from './ProductSummary';
 
 import {
-  requestProducts,
-  receiveProducts,
-  receiveProductsError,
+  requestProductsSummary,
+  receiveProductsSummary,
+  receiveProductsSummaryError,
   requestProductsNext,
   requestProductsBack,
 } from '../actions';
 
 const ProductGrid = () => {
   const dispatch = useDispatch();
-  const categoryFilter = useSelector((state) => state.categoryFilter);
-  const locationFilter = useSelector((state) => state.locationFilter);
-  const products = useSelector((state) => state.products);
+  const productsSummary = useSelector((state) => state.productsSummary);
 
   useEffect(() => {
-    dispatch(requestProducts());
-    fetch(products.url + products.index + '/' + products.itemsPerPage + products.queryString)
+    dispatch(requestProductsSummary());
+    fetch(productsSummary.url + productsSummary.index + '/' + productsSummary.itemsPerPage + productsSummary.queryString)
       .then((res) => res.json())
-      .then((json) => dispatch(receiveProducts(json.data)))
-      .catch((err) => dispatch(receiveProductsError()));
-  },[products.url, products.index, products.queryString]);
+      .then((json) => dispatch(receiveProductsSummary(json.data)))
+      .catch((err) => dispatch(receiveProductsSummaryError()));
+  },[
+    productsSummary.url,
+    productsSummary.index,
+    productsSummary.queryString,
+    productsSummary.itemsPerPage,
+    dispatch
+  ]);
 
-  if (products.status === 'loading') {
+  if (productsSummary.status === 'loading') {
     return (
       <>
         Loading
@@ -38,19 +42,19 @@ const ProductGrid = () => {
         <Wrapper>
           <Pager>
             <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
-            Showing products {products.index + 1} to{' '}
-            {(products.index + products.itemsPerPage < products.numProducts) ? products.index + products.itemsPerPage : products.numProducts} of{' '}
-            {products.numProducts} in total
+            Showing products {productsSummary.index + 1} to{' '}
+            {(productsSummary.index + productsSummary.itemsPerPage < productsSummary.numProducts) ? productsSummary.index + productsSummary.itemsPerPage : productsSummary.numProducts} of{' '}
+            {productsSummary.numProducts} in total
             <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
           </Pager>
           <GridContainer>
-            {products.products.map(product => <ProductItemSummary key={product._id} product={product} />)}
+            {productsSummary.products.map(product => <ProductSummary key={product._id} product={product} />)}
           </GridContainer>
           <Pager>
             <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
-            Showing products {products.index + 1} to{' '}
-            {(products.index + products.itemsPerPage < products.numProducts) ? products.index + products.itemsPerPage : products.numProducts} of{' '}
-            {products.numProducts} in total
+            Showing products {productsSummary.index + 1} to{' '}
+            {(productsSummary.index + productsSummary.itemsPerPage < productsSummary.numProducts) ? productsSummary.index + productsSummary.itemsPerPage : productsSummary.numProducts} of{' '}
+            {productsSummary.numProducts} in total
             <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
           </Pager>
         </Wrapper>
@@ -90,6 +94,8 @@ const RightArrow = styled(FiArrowRightCircle)`
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
 `;
 
 export default ProductGrid;

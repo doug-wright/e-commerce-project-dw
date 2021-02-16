@@ -93,9 +93,10 @@ const getProductsByBodyLocation = (bodyLocation) => {
 const getProductById = (id) => {
   return new Promise((resolve, reject) => {
     const product = products.filter(product => product._id === Number(id));
+    const company = companies.filter(company => company._id === product[0].companyId);
 
     if (product.length > 0) {
-      resolve({ product: product[0] });
+      resolve({ product: { ...product[0], company: company[0] }});
     } else {
       reject({ request: id, message: 'Product not found' });
     }

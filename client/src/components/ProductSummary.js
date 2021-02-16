@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const ProductItemSummary = ({ product }) => {
+const ProductSummary = ({ product }) => {
   return (
     <Wrapper>
-      <Img src={product.imageSrc} />
+      <Link to={'/product/' + product._id}>
+        <Img src={product.imageSrc} />
+      </Link>
       <ProductName>{product.name}</ProductName>
       <ProductPrice>{product.price}</ProductPrice>
       <ProductStock stock={product.numInStock}>{product.numInStock > 0 ? product.numInStock + ' in stock' : 'Out of stock'}</ProductStock>
@@ -18,7 +21,6 @@ const Wrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 20px 10px;
-  margin: 10px;
   border-radius: 10px;
   border: 1px solid #eeeeee;
   box-shadow: 2px 2px 5px #dddddd;
@@ -50,4 +52,4 @@ const ProductStock = styled.div`
   background-color: ${props => props.stock > 0 ? 'green' : 'red'};
 `;
 
-export default ProductItemSummary;
+export default ProductSummary;

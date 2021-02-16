@@ -11,14 +11,14 @@ const initialState = {
 
 const productsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'REQUEST_PRODUCTS': {
+    case 'REQUEST_PRODUCTS_SUMMARY': {
       return {
         ...state,
         status: 'loading'
       };
     }
 
-    case 'RECEIVE_PRODUCTS': {
+    case 'RECEIVE_PRODUCTS_SUMMARY': {
       return {
         ...state,
         products: action.products,
@@ -27,7 +27,7 @@ const productsReducer = (state = initialState, action) => {
       };
     }
 
-    case 'RECEIVE_PRODUCTS_ERROR': {
+    case 'RECEIVE_PRODUCTS_SUMMARY_ERROR': {
       return {
         ...state,
         status: 'error'
