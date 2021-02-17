@@ -25,14 +25,14 @@ const FilterSelect = () => {
   useEffect(() => {
     // Fetch categories
     dispatch(requestCategoryFilters());
-    fetch('http://localhost:4000/api/v1/product/categories')
+    fetch('/api/v1/product/categories')
       .then((res) => res.json())
       .then((json) => dispatch(receiveCategoryFilters(json.data.categories)))
       .catch((err) => dispatch(receiveCategoryFiltersError()));
 
     // Fetch body locations
     dispatch(requestLocationFilters());
-    fetch('http://localhost:4000/api/v1/product/locations')
+    fetch('/api/v1/product/locations')
       .then((res) => res.json())
       .then((json) => dispatch(receiveLocationFilters(json.data.bodyLocations)))
       .catch((err) => dispatch(receiveLocationFiltersError()));
@@ -66,7 +66,7 @@ const FilterSelect = () => {
         queryString = '?locations=' + locations;
       }
 
-      dispatch(setUrl('http://localhost:4000/api/v1/product/filter/', queryString));
+      dispatch(setUrl('/api/v1/product/filter/', queryString));
       window.scrollTo(0, 0);
     }
   };
@@ -74,7 +74,7 @@ const FilterSelect = () => {
   const handleClearFilters = () => {
     dispatch(clearCategoryFilters());
     dispatch(clearLocationFilters());
-    dispatch(setUrl('http://localhost:4000/api/v1/product/index/', ''));
+    dispatch(setUrl('/api/v1/product/index/', ''));
   };
 
   if (categoryFilter.status === 'loading' || locationFilter.status === 'loading') {

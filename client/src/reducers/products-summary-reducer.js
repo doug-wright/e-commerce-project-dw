@@ -1,5 +1,5 @@
 const initialState = {
-  url: 'http://localhost:4000/api/v1/product/index/',
+  url: '/api/v1/product/index/',
   queryString: '',
   products: null,
   index: 0,

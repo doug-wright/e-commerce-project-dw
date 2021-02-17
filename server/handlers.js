@@ -1,5 +1,10 @@
+'use strict';
+
+const { v4: uuidv4 } = require('uuid');
+
 const companies = require('./data/companies.json');
 const products = require('./data/items.json');
+const cart = require('./data/cart');
 
 // Get company by id
 const getCompanyById = (id) => {
@@ -114,14 +119,12 @@ const getProductByFilters = (fromIndex, quantity, queryString) => {
     if (queryString.hasOwnProperty('categories')) {
       categoriesArray = queryString.categories.split(',');
       categoriesArray.pop();
-      console.log(categoriesArray);
     }
 
     // Populate locations array
     if (queryString.hasOwnProperty('locations')) {
       locationsArray = queryString.locations.split(',');
       locationsArray.pop();
-      console.log(locationsArray);
     }
 
     for (let i = 0; i < products.length; i++) {
@@ -198,6 +201,52 @@ const getProductByIndex = (fromIndex, quantity) => {
   });
 };
 
+// Post item to cart
+const postItemToCart = (req) => {
+  return new Promise((resolve, reject) => {
+    const newCartItem = {
+      cartId: uuidv4(),
+      userId: req.body.userId,
+      productId: req.body.productId,
+      quantity: req.body.quantity,
+      price: req.body.price,
+      timestamp: Date.now()
+    };
+
+    cart.push(newCartItem);
+    console.log(cart);
+
+    resolve({ cartId: newCartItem.cartId });
+  });
+};
+
+// Get items in cart
+const getItemsInCart = (req) => {
+  return new Promise((resolve, reject) => {
+    // const cartItems = cart.filter(cart => cart.userId === req.params.userId);
+    let cartItems = [];
+    let cartObj = {};
+
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].userId === req.params.userId) {
+        cartObj = {
+          cartId: cart[i].cartId,
+          productId: cart[i].productId,
+          quantity: cart[i].quantity,
+          price: cart[i].price
+        }
+        cartItems.push(cartObj);
+      }
+    }
+
+    if (cartItems.length > 0) {
+      resolve({ cart: cartItems });
+    } else {
+      reject({ request: req.params.userId, message: 'Cart empty or user does not exist' });
+    }
+  });
+};
+
 module.exports = {
   getCompanyById,
   getProducts,
@@ -208,5 +257,7 @@ module.exports = {
   getProductsByBodyLocation,
   getProductById,
   getProductByFilters,
-  getProductByIndex
+  getProductByIndex,
+  postItemToCart,
+  getItemsInCart
 };

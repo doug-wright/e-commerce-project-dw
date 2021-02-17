@@ -15,23 +15,32 @@ import {
 
 const ProductGrid = () => {
   const dispatch = useDispatch();
-  const productsSummary = useSelector((state) => state.productsSummary);
+  const {
+    url,
+    index,
+    itemsPerPage,
+    queryString,
+    status,
+    numProducts,
+    products
+  } = useSelector((state) => state.productsSummary);
 
   useEffect(() => {
     dispatch(requestProductsSummary());
-    fetch(productsSummary.url + productsSummary.index + '/' + productsSummary.itemsPerPage + productsSummary.queryString)
+    fetch(url + index + '/' + itemsPerPage + queryString)
       .then((res) => res.json())
       .then((json) => dispatch(receiveProductsSummary(json.data)))
       .catch((err) => dispatch(receiveProductsSummaryError()));
+    window.scrollTo(0, 0);
   },[
-    productsSummary.url,
-    productsSummary.index,
-    productsSummary.queryString,
-    productsSummary.itemsPerPage,
+    url,
+    index,
+    queryString,
+    itemsPerPage,
     dispatch
   ]);
 
-  if (productsSummary.status === 'loading') {
+  if (status === 'loading') {
     return (
       <>
         Loading
@@ -42,19 +51,19 @@ const ProductGrid = () => {
         <Wrapper>
           <Pager>
             <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
-            Showing products {productsSummary.index + 1} to{' '}
-            {(productsSummary.index + productsSummary.itemsPerPage < productsSummary.numProducts) ? productsSummary.index + productsSummary.itemsPerPage : productsSummary.numProducts} of{' '}
-            {productsSummary.numProducts} in total
+            Showing products {index + 1} to{' '}
+            {(index + itemsPerPage < numProducts) ? index + itemsPerPage : numProducts} of{' '}
+            {numProducts} in total
             <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
           </Pager>
           <GridContainer>
-            {productsSummary.products.map(product => <ProductSummary key={product._id} product={product} />)}
+            {products.map(product => <ProductSummary key={product._id} product={product} />)}
           </GridContainer>
           <Pager>
             <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
-            Showing products {productsSummary.index + 1} to{' '}
-            {(productsSummary.index + productsSummary.itemsPerPage < productsSummary.numProducts) ? productsSummary.index + productsSummary.itemsPerPage : productsSummary.numProducts} of{' '}
-            {productsSummary.numProducts} in total
+            Showing products {index + 1} to{' '}
+            {(index + itemsPerPage < numProducts) ? index + itemsPerPage : numProducts} of{' '}
+            {numProducts} in total
             <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
           </Pager>
         </Wrapper>

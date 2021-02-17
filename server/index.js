@@ -16,7 +16,9 @@ const {
   getProductsByBodyLocation,
   getProductById,
   getProductByFilters,
-  getProductByIndex
+  getProductByIndex,
+  postItemToCart,
+  getItemsInCart
 } = require('./handlers');
 const { response } = require('express');
 
@@ -146,6 +148,28 @@ express()
       const response = await getProductById(req.params.id);
 
       res.status(200).json({ status: 200, data: response });
+    } catch (err) {
+      res.status(400).json({ status: 400, data: { request: err.request, message: err.message }});
+    }
+  })
+
+  // Post item to cart
+  .post('/api/v1/cart', async (req, res) => {
+    try {
+      const response = await postItemToCart(req);
+
+      res.status(201).json({ status: 201, data: response });
+    } catch (err) {
+      res.status(400).json({ status: 400, data: { request: err.request, message: err.message }});
+    }
+  })
+
+  // Get items in cart
+  .get('/api/v1/cart/:userId', async (req, res) => {
+    try {
+      const response = await getItemsInCart(req);
+
+      res.status(200).json({ status: 200, data: response});
     } catch (err) {
       res.status(400).json({ status: 400, data: { request: err.request, message: err.message }});
     }

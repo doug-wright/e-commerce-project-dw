@@ -7,6 +7,8 @@ import FilterSelect from './FilterSelect';
 import ProductGrid from './ProductGrid';
 import ProductDetail from './ProductDetail';
 
+const USER_ID = '930436bc-0220-4c66-b616-3615a5ae8801';
+
 function App() {
   return (
     <>

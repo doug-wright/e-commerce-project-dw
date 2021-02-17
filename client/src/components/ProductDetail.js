@@ -16,7 +16,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     dispatch(requestProductDetail());
-    fetch('http://localhost:4000/api/v1/product/' + productId)
+    fetch('/api/v1/product/' + productId)
       .then((res) => res.json())
       .then((json) => {
         dispatch(receiveProductDetail(json.data.product));
