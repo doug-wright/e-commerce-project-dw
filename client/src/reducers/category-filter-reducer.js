@@ -14,9 +14,6 @@ const categoryFilterReducer = (state = initialState, action) => {
     }
 
     case 'RECEIVE_CATEGORY_FILTERS': {
-      // const filters = action.filters.map(filter => {
-      //   return { name: filter, selected: false }
-      // });
       const filters = {};
 
       action.filters.forEach(filter => {

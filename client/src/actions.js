@@ -86,3 +86,37 @@ export const receiveProductDetail = (product) => ({
 export const receiveProductDetailError = () => ({
   type: 'RECEIVE_PRODUCT_DETAIL_ERROR'
 });
+
+// Cart actions
+export const requestCart = () => ({
+  type: 'REQUEST_CART',
+});
+
+export const receiveCart = (cart) => ({
+  type: 'RECEIVE_CART',
+  cart
+});
+
+export const receiveCartError = () => ({
+  type: 'RECEIVE_CART_ERROR'
+});
+
+export const addToCart = (cartItem) => ({
+  type: 'ADD_TO_CART',
+  cartItem
+});
+
+export const removeFromCart = (cartId) => ({
+  type: 'REMOVE_FROM_CART',
+  cartId
+});
+
+export const emptyCart = () => ({
+  type: 'EMPTY_CART'
+});
+
+export const updateCartQuantity = (cartId, quantity) => ({
+  type: 'UPDATE_CART_QUANTITY',
+  cartId,
+  quantity
+});

@@ -48,6 +48,7 @@ const ProductDetail = () => {
 
 const Wrapper = styled.div`
   display: flex;
+  height: 100vh;
 `;
 
 const Img = styled.img`
@@ -62,6 +63,7 @@ const Img = styled.img`
 
 const Details = styled.div`
   padding-top: 20px;
+  padding-right: 10px;
 `;
 
 const ProductStock = styled.p`
@@ -70,7 +72,8 @@ const ProductStock = styled.p`
 `;
 
 const Button = styled.button`
-  padding: 10px 20px;
+  padding: 5px 15px;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   border-radius: 5px;
