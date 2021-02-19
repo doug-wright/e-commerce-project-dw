@@ -4,7 +4,8 @@ const { v4: uuidv4 } = require('uuid');
 
 const companies = require('./data/companies.json');
 const products = require('./data/items.json');
-const cart = require('./data/cart');
+
+const cart = [];
 
 // Get company by id
 const getCompanyById = (id) => {

@@ -42,7 +42,7 @@ function App() {
           </div>
           <Navigation>
             <CartContainer>
-              <CartLink to="/cart"><FiShoppingCart /></CartLink>{userCart.cart !== null ? <CartItems>{userCart.cart.length}</CartItems> : null}
+              <CartLink to="/cart"><FiShoppingCart /></CartLink>{userCart.cart.length !== 0 ? <CartItems>{userCart.cart.length}</CartItems> : null}
             </CartContainer>
           </Navigation>
         </Header>
@@ -74,7 +74,7 @@ function App() {
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: minmax(165px, 1fr) 4fr;
-  grid-template-rows: 60px 60px 4fr;
+  grid-template-rows: 60px;
   grid-template-areas:
     'header header'
     /* 'sidebar subheader' */
@@ -139,7 +139,7 @@ const Sidebar = styled.div`
   grid-area: sidebar;
   height: 100vh;
   padding: 5px;
-  border-right: 1px solid #dddddd
+  border-right: 1px solid #dddddd;
 `;
 
 /* const SubHeader = styled.div`

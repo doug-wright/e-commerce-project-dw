@@ -1,5 +1,5 @@
 const initialState = {
-  cart: null,
+  cart: [],
   status: 'loading',
   error: null
 };
@@ -10,7 +10,7 @@ const cartReducer = (state = initialState, action) => {
       return {
         ...state,
         status: 'loading'
-      }
+      };
     }
 
     case 'RECEIVE_CART': {
@@ -18,48 +18,58 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         cart: action.cart,
         status: 'idle'
-      }
+      };
     }
 
     case 'RECEIVE_CART_ERROR': {
       return {
         ...state,
         status: 'error'
-      }
+      };
     }
 
     case 'ADD_TO_CART': {
-      return {
-        ...state
-      }
-    }
+      let newCart = [...state.cart];
+      const index = newCart.findIndex(({ productId }) => productId === action.cartItem.productId);
 
-    case 'REMOVE_FROM_CART': {
-      let newCart = state.cart;
-      const index = newCart.findIndex(({ cartId }) => cartId === action.cartId);
-
-      newCart.splice(index, 1);
-
-      if (newCart.length === 0) {
-        newCart = null;
+      if (index === -1) {
+        newCart.push(action.cartItem);
+      } else {
+        newCart[index] = { ...newCart[index], quantity: newCart[index].quantity + 1 };
       }
 
       return {
         ...state,
         cart: newCart
-      }
+      };
+    }
+
+    case 'REMOVE_FROM_CART': {
+      let newCart = [...state.cart];
+      const index = newCart.findIndex(({ cartId }) => cartId === action.cartId);
+
+      newCart.splice(index, 1);
+
+      return {
+        ...state,
+        cart: newCart
+      };
     }    
 
     case 'EMPTY_CART': {
       return {
-        initialState
-      }
+        ...initialState
+      };
     }
 
     case 'UPDATE_CART_QUANTITY':
+      let newCart = [...state.cart];
+
+      newCart[action.index] = { ...newCart[action.index], quantity: Number(action.quantity) };
       return {
-        ...state
-      }
+        ...state,
+        cart: newCart
+      };
 
     default: {
       return state;

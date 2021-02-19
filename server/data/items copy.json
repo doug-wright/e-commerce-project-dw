@@ -1,7 +1,7 @@
 [
   {
     "name": "Barska GB12166 Fitness Watch with Heart Rate Monitor",
-    "price": "49.99",
+    "price": "$49.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6543,
@@ -11,7 +11,7 @@
   },
   {
     "name": "Belkin GS5 Sport Fit Armband, Black F8M918B1C00",
-    "price": "24.99",
+    "price": "$24.99",
     "body_location": "Arms",
     "category": "Fitness",
     "_id": 6544,
@@ -21,7 +21,7 @@
   },
   {
     "name": "Bowflex EZ Pro Strapless Heart Rate Monitor Watch, Black",
-    "price": "12.99",
+    "price": "$12.99",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6545,
@@ -31,7 +31,7 @@
   },
   {
     "name": "Casio G Shock Watch Solar Atom (gwm500a-1)",
-    "price": "67.62",
+    "price": "$67.62",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6546,
@@ -41,7 +41,7 @@
   },
   {
     "name": "Casio WS220 Solar Runner Digital Wrist Watch; Navy Blue",
-    "price": "39.99",
+    "price": "$39.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6547,
@@ -51,7 +51,7 @@
   },
   {
     "name": "Coleman G7HD-SWIM POV 1080p 5 Megapixel Goggles Camcorder ELBG7HDSWIM",
-    "price": "167.99",
+    "price": "$167.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6548,
@@ -61,7 +61,7 @@
   },
   {
     "name": "Ekho Fit-18 Heart Rate Monitor 12-2042",
-    "price": "105.99",
+    "price": "$105.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6549,
@@ -71,7 +71,7 @@
   },
   {
     "name": "Ekho FiT-9 Women's Heart Rate Monitor 12-2041",
-    "price": "95.12",
+    "price": "$95.12",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6550,
@@ -81,7 +81,7 @@
   },
   {
     "name": "Fitbit Flex Cordless Activity/Sleep Tracker - Black",
-    "price": "94.95",
+    "price": "$94.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6551,
@@ -91,7 +91,7 @@
   },
   {
     "name": "G1 Smartwatch /w Bluetooth Hands-Free Solution Large Black",
-    "price": "57.97",
+    "price": "$57.97",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6552,
@@ -101,7 +101,7 @@
   },
   {
     "name": "Garmin Forerunner 220 GPS Running Watch, White/Violet",
-    "price": "249.99",
+    "price": "$249.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6553,
@@ -111,7 +111,7 @@
   },
   {
     "name": "Garmin International Garmin vofit Bundle - Activity tracking wristband - slate (010-01225-35)",
-    "price": "169.99",
+    "price": "$169.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6554,
@@ -121,7 +121,7 @@
   },
   {
     "name": "Garmin Vivofit Fitness Bracelet",
-    "price": "79.99",
+    "price": "$79.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6555,
@@ -131,7 +131,7 @@
   },
   {
     "name": "Garmin Vivofita,, Fitness Band",
-    "price": "129.99",
+    "price": "$129.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6556,
@@ -141,7 +141,7 @@
   },
   {
     "name": "GolfBuddy WT3 Watch White",
-    "price": "169.95",
+    "price": "$169.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6557,
@@ -151,7 +151,7 @@
   },
   {
     "name": "Jawbone - Up - Activity tracking wristband - large size - Blue - for Apple iPad; iPad 1; and more",
-    "price": "79.99",
+    "price": "$79.99",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6559,
@@ -161,7 +161,7 @@
   },
   {
     "name": "Jawbone - Up - Activity tracking wristband - medium size - Onyx - for Apple iPhone 3G, 3GS, and more",
-    "price": "112.99",
+    "price": "$112.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6560,
@@ -171,7 +171,7 @@
   },
   {
     "name": "Jawbone - Up Wristband (large) - Red",
-    "price": "51.99",
+    "price": "$51.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6561,
@@ -181,7 +181,7 @@
   },
   {
     "name": "Jawbone UP Fitness Tracker (Medium, Navy Blue)",
-    "price": "52.29",
+    "price": "$52.29",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6562,
@@ -191,7 +191,7 @@
   },
   {
     "name": "Jawbone UP Fitness Tracker (Medium, Red)",
-    "price": "59.95",
+    "price": "$59.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6563,
@@ -201,7 +201,7 @@
   },
   {
     "name": "Jawbone UP24 Activity Tracker",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6564,
@@ -211,7 +211,7 @@
   },
   {
     "name": "Jawbone UP24 Bluetooth Activity Tracker - Small - Onyx",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6565,
@@ -221,7 +221,7 @@
   },
   {
     "name": "Jawbone UP24 Orange Fitness Tracker, Medium",
-    "price": "129.95",
+    "price": "$129.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6566,
@@ -231,7 +231,7 @@
   },
   {
     "name": "LifeTrak Move Activity Tracking Fitness Watch, Black/Green",
-    "price": "65.16",
+    "price": "$65.16",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6567,
@@ -241,7 +241,7 @@
   },
   {
     "name": "Magellan Echo Fitness Watch with Heart Rate Monitor, Black",
-    "price": "132.23",
+    "price": "$132.23",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6568,
@@ -251,7 +251,7 @@
   },
   {
     "name": "Magellan Echo with Heart Rate Monitor Bluetooth Smart Gray",
-    "price": "149.99",
+    "price": "$149.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6569,
@@ -261,7 +261,7 @@
   },
   {
     "name": "Martian Watches Victory Watch",
-    "price": "299",
+    "price": "$299",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6570,
@@ -271,7 +271,7 @@
   },
   {
     "name": "Mio - Link Sport Wristband Heart Rate Monitor (Large) - Slate",
-    "price": "96.99",
+    "price": "$96.99",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6571,
@@ -281,7 +281,7 @@
   },
   {
     "name": "Misfit Wearables Topaz Shine Activity Tracker - SH0GZ",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6572,
@@ -291,7 +291,7 @@
   },
   {
     "name": "Mota MT-G2PBR Smartwatch G2 Pro Black Large Bluetooth NFC Voice Activation",
-    "price": "87.89",
+    "price": "$87.89",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6573,
@@ -301,7 +301,7 @@
   },
   {
     "name": "New 2013 Suunto Core All Black Military Outdoor Sports Smart Watch SS014279010",
-    "price": "275",
+    "price": "$275",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6574,
@@ -311,7 +311,7 @@
   },
   {
     "name": "Polar FT60M - Activity tracker - monochrome - black - with heart rate sensor",
-    "price": "105",
+    "price": "$105",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6575,
@@ -321,7 +321,7 @@
   },
   {
     "name": "Polar FT80 Heart Rate Monitor - Black",
-    "price": "229.95",
+    "price": "$229.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6576,
@@ -331,7 +331,7 @@
   },
   {
     "name": "Polar Loop - Activity tracker - 4 MB - Bluetooth - 1.3 oz - black",
-    "price": "77.95",
+    "price": "$77.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6577,
@@ -341,7 +341,7 @@
   },
   {
     "name": "Polar RC3 GPS with heart rate - Cycle, running GPS watch",
-    "price": "199.97",
+    "price": "$199.97",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6578,
@@ -351,7 +351,7 @@
   },
   {
     "name": "Polar RCX5 G5 GPS Heart Rate Monitor-Red",
-    "price": "291.99",
+    "price": "$291.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6579,
@@ -361,7 +361,7 @@
   },
   {
     "name": "POV Action Video Cameras - PRO27 - POV Action Video PRO27 POV HD 720p Action Camera Eyewear (Black)",
-    "price": "149.95",
+    "price": "$149.95",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6580,
@@ -371,7 +371,7 @@
   },
   {
     "name": "Samsung Galaxy Gear - Smart watch - 1.63\" - 4 GB - NFC, Bluetooth - 1.9 Megapixel camera - 2.6 oz - gray",
-    "price": "127.49",
+    "price": "$127.49",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6582,
@@ -381,7 +381,7 @@
   },
   {
     "name": "Samsung Galaxy Gear Smartwatch (Rose Gold)",
-    "price": "89.95",
+    "price": "$89.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6583,
@@ -391,7 +391,7 @@
   },
   {
     "name": "samsung gear 2 neo orange smart watch",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6584,
@@ -401,7 +401,7 @@
   },
   {
     "name": "Samsung Gear(tm) Fit Band in Blue",
-    "price": "49.99",
+    "price": "$49.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6585,
@@ -411,7 +411,7 @@
   },
   {
     "name": "Scosche Rhythm Bluetooth Armband Heart Rate Monitor, Yellow/Black",
-    "price": "49.97",
+    "price": "$49.97",
     "body_location": "Arms",
     "category": "Fitness",
     "_id": 6586,
@@ -421,7 +421,7 @@
   },
   {
     "name": "Smart Health Walking Fit EKG Accurate Heart Rate Watch",
-    "price": "38.99",
+    "price": "$38.99",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6587,
@@ -431,7 +431,7 @@
   },
   {
     "name": "Smartwatch G2 MTSWG2WS",
-    "price": "63.69",
+    "price": "$63.69",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6588,
@@ -441,7 +441,7 @@
   },
   {
     "name": "Sportline 310 Qlip - Activity tracker - monochrome - white",
-    "price": "24.55",
+    "price": "$24.55",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6589,
@@ -451,7 +451,7 @@
   },
   {
     "name": "Sportline DUO 1010 (Mens) - Activity tracker - monochrome - black - with heart rate sensor",
-    "price": "49.99",
+    "price": "$49.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6590,
@@ -461,7 +461,7 @@
   },
   {
     "name": "Sportline SOLO 965 (Womens) - Activity tracker - black",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6591,
@@ -471,7 +471,7 @@
   },
   {
     "name": "TomTom BT Heart Rate Monitor One Color, One Size 14688754",
-    "price": "59.60",
+    "price": "$59.60",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6593,
@@ -481,7 +481,7 @@
   },
   {
     "name": "Xtreme Cables XFit Fitness Band, Pink/Black - 2 pack",
-    "price": "49.99",
+    "price": "$49.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6595,
@@ -491,7 +491,7 @@
   },
   {
     "name": "YOO1 Activity Tracker and Shoe Clip, Raspberry",
-    "price": "19.99",
+    "price": "$19.99",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6596,
@@ -501,7 +501,7 @@
   },
   {
     "name": "YOO2 Bluetooth Smart Activity Tracker, Raspberry",
-    "price": "39.99",
+    "price": "$39.99",
     "body_location": "Waist",
     "category": "Lifestyle",
     "_id": 6597,
@@ -511,7 +511,7 @@
   },
   {
     "name": "Talk Trac Wearable Communicator,Communicator,Each",
-    "price": "159.08",
+    "price": "$159.08",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6598,
@@ -521,7 +521,7 @@
   },
   {
     "name": "GARMIN 010-00863-34 Forerunner(R) 210 GPS Sports Watch",
-    "price": "153.40",
+    "price": "$153.40",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6599,
@@ -531,7 +531,7 @@
   },
   {
     "name": "GARMIN 010-01225-38 vofit(TM) Fitness Band Bundle (Red",
-    "price": "164.01",
+    "price": "$164.01",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6600,
@@ -541,7 +541,7 @@
   },
   {
     "name": "180s Men's Foundation LED Glove",
-    "price": "54.95",
+    "price": "$54.95",
     "body_location": "Hands",
     "category": "Lifestyle",
     "_id": 6602,
@@ -551,7 +551,7 @@
   },
   {
     "name": "Ablenet 10002000 Talktrac Wearable Communicator",
-    "price": "166.95",
+    "price": "$166.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6608,
@@ -561,7 +561,7 @@
   },
   {
     "name": "Accessories Garmin Pack 3 Small Straps for Vivofit (orange,pink,green)",
-    "price": "24.99",
+    "price": "$24.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6609,
@@ -571,7 +571,7 @@
   },
   {
     "name": "Accusplit AE920HRM Strapless Heart Monitor, Black",
-    "price": "76.99",
+    "price": "$76.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6610,
@@ -581,7 +581,7 @@
   },
   {
     "name": "Adafruit Industries 1222 Gemma Arduino Wearable Controller",
-    "price": "7.95",
+    "price": "$7.95",
     "body_location": "Neck",
     "category": "Industrial",
     "_id": 6612,
@@ -591,7 +591,7 @@
   },
   {
     "name": "Apple - Nike + iPod Sensor - Wireless in-shoe sensor - for iPhone 3GS, 4, and more",
-    "price": "19.99",
+    "price": "$19.99",
     "body_location": "Feet",
     "category": "Fitness",
     "_id": 6614,
@@ -601,7 +601,7 @@
   },
   {
     "name": "Archos Activity Tracker 502590E",
-    "price": "66.99",
+    "price": "$66.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6615,
@@ -611,7 +611,7 @@
   },
   {
     "name": "Bowflex EZ Pro Heart Rate Monitor Watch w/ Quick Touch Technology ...",
-    "price": "12.99",
+    "price": "$12.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6620,
@@ -621,7 +621,7 @@
   },
   {
     "name": "Bowflex EZ Pro Heart Rate Monitor Watch, Khaki",
-    "price": "12.99",
+    "price": "$12.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6621,
@@ -631,7 +631,7 @@
   },
   {
     "name": "Casio A168W-1 Mens Classic Digital Electro Luminescence Bracelet Wrist Watch; Silver",
-    "price": "13.99",
+    "price": "$13.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6623,
@@ -641,7 +641,7 @@
   },
   {
     "name": "Casio AQS810W Solar Analog/Digital Wrist Watch; Navy/White",
-    "price": "43.16",
+    "price": "$43.16",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6624,
@@ -651,7 +651,7 @@
   },
   {
     "name": "Casio AQW100-1AV Mens Digital/Analog Forester Active Dial Sports Wrist Watch W/Resin Band; Black",
-    "price": "37.33",
+    "price": "$37.33",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6625,
@@ -661,7 +661,7 @@
   },
   {
     "name": "Casio Casio AMW-360B-1A1V Mens Analog Digital Silicone Strap Sports Watch",
-    "price": "52.99",
+    "price": "$52.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6626,
@@ -671,7 +671,7 @@
   },
   {
     "name": "CASIO Casio SGW300H-1AV Wrist Watch - Men Sports Chronograph Digital Quartz",
-    "price": "41.99",
+    "price": "$41.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6627,
@@ -681,7 +681,7 @@
   },
   {
     "name": "Casio G-SHOCK Multi-Function Chronograph Alarm Sport Watch #DW-9052-1V",
-    "price": "41.31",
+    "price": "$41.31",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6628,
@@ -691,7 +691,7 @@
   },
   {
     "name": "Casio LA-11WB-1 Women's Digital Daily Alarm Classic Water Resistant Wrist Watch, Black",
-    "price": "9.91",
+    "price": "$9.91",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6629,
@@ -701,7 +701,7 @@
   },
   {
     "name": "Casio Men's Black Analog Anti Reverse Bezel Watch Black - C195470",
-    "price": "38.38",
+    "price": "$38.38",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6630,
@@ -711,7 +711,7 @@
   },
   {
     "name": "Casio Mens EFA119BK-1AV Ana-Digi Edifice Stainless Steel Watch",
-    "price": "79.99",
+    "price": "$79.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6631,
@@ -721,7 +721,7 @@
   },
   {
     "name": "Casio Mens G-Shock Illuminator Black 200 Meters Alarm DW6900-1",
-    "price": "29.99",
+    "price": "$29.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6632,
@@ -731,7 +731,7 @@
   },
   {
     "name": "Casio Mens Solar Digital Analog Sport Watch",
-    "price": "49.99",
+    "price": "$49.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6633,
@@ -741,7 +741,7 @@
   },
   {
     "name": "Casio Mens W-S220C-4AVCF Tough Solar Runner Digital Display Quartz Re",
-    "price": "33.49",
+    "price": "$33.49",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6634,
@@ -751,7 +751,7 @@
   },
   {
     "name": "Casio Shock G100-1bv Black Rubber Strap Digital Analog 20 Bar 200m",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6635,
@@ -761,7 +761,7 @@
   },
   {
     "name": "Casio Tough Solar Ana Digi Watch",
-    "price": "36.31",
+    "price": "$36.31",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6636,
@@ -771,7 +771,7 @@
   },
   {
     "name": "Casio Watches WV200A-1A Wave Ceptor Atomic Sports Watch",
-    "price": "39.99",
+    "price": "$39.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6638,
@@ -781,7 +781,7 @@
   },
   {
     "name": "Casio Wrist Watch - Men - Sports - Anadigi - Quartz ...",
-    "price": "59.96",
+    "price": "$59.96",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6639,
@@ -791,7 +791,7 @@
   },
   {
     "name": "Cogito Classic - Clockwork Orange",
-    "price": "179.95",
+    "price": "$179.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6640,
@@ -801,7 +801,7 @@
   },
   {
     "name": "Cogito Classic - Green Velvet",
-    "price": "179.95",
+    "price": "$179.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6641,
@@ -811,7 +811,7 @@
   },
   {
     "name": "COGITO Classic Connected Watch (Clockwork Orange)",
-    "price": "179.99",
+    "price": "$179.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6642,
@@ -821,7 +821,7 @@
   },
   {
     "name": "Cogito Classic Smart Bluetooth Connected Watch For Smartphones Retail",
-    "price": "179.99",
+    "price": "$179.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6643,
@@ -831,7 +831,7 @@
   },
   {
     "name": "COGITO CW2.0-003-01 CLASSIC watch 2.0, w/Silicone band White Alpine",
-    "price": "179.99",
+    "price": "$179.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6644,
@@ -841,7 +841,7 @@
   },
   {
     "name": "Cogito Pop - Black Panther",
-    "price": "129.95",
+    "price": "$129.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6645,
@@ -851,7 +851,7 @@
   },
   {
     "name": "Cogito Pop - Grey Paloma",
-    "price": "129.95",
+    "price": "$129.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6646,
@@ -861,7 +861,7 @@
   },
   {
     "name": "Coleman Aktivsport Action Camera with GPS (Red)",
-    "price": "159",
+    "price": "$159",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6647,
@@ -871,7 +871,7 @@
   },
   {
     "name": "Coleman CX12WP+LCD Bravo2 POV 1080p High Definition 5 Megapixel Sports",
-    "price": "175",
+    "price": "$175",
     "body_location": "Wrist",
     "category": "Entertainment",
     "_id": 6648,
@@ -881,7 +881,7 @@
   },
   {
     "name": "Coleman CX12WP+RC POV 1080p High Definition 5 Megapixel Sports & Actio",
-    "price": "177.99",
+    "price": "$177.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6649,
@@ -891,7 +891,7 @@
   },
   {
     "name": "Coleman CX5HD 5.0 MP Action camera - 720p - Metallic silver",
-    "price": "56",
+    "price": "$56",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6650,
@@ -901,7 +901,7 @@
   },
   {
     "name": "Coleman G3HD-SUN 1080 POV HD 5MP SG Cmcrdr",
-    "price": "149",
+    "price": "$149",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6651,
@@ -911,7 +911,7 @@
   },
   {
     "name": "Coleman G9HD-SKI POV 1080p Hight Definiton 5.0 Megapixel Snow Goggles",
-    "price": "160.99",
+    "price": "$160.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6652,
@@ -921,7 +921,7 @@
   },
   {
     "name": "Dorcy 230L ZX Series Flashlight",
-    "price": "33.74",
+    "price": "$33.74",
     "body_location": "Hands",
     "category": "Industrial",
     "_id": 6658,
@@ -931,7 +931,7 @@
   },
   {
     "name": "Ekho FiT-19 Women's Heart Rate Monitor 12-2043",
-    "price": "105.99",
+    "price": "$105.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6661,
@@ -941,7 +941,7 @@
   },
   {
     "name": "Ematic - ESW454W - Ematic SmartWatch - Digital - Quartz",
-    "price": "79.99",
+    "price": "$79.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6662,
@@ -951,7 +951,7 @@
   },
   {
     "name": "Ematic Smart Watch (Black)",
-    "price": "99",
+    "price": "$99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6663,
@@ -961,7 +961,7 @@
   },
   {
     "name": "Ematic SmartWatch - Digital - Quartz ...",
-    "price": "92.95",
+    "price": "$92.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6664,
@@ -971,7 +971,7 @@
   },
   {
     "name": "Fabrication Enterprises E-10 Heart Rate Monitor, Green",
-    "price": "65.44",
+    "price": "$65.44",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6669,
@@ -981,7 +981,7 @@
   },
   {
     "name": "Fitbit Flex Wireless Activity & Sleep Tracker Wristband, Slate",
-    "price": "94",
+    "price": "$94",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6674,
@@ -991,7 +991,7 @@
   },
   {
     "name": "Fitbit One Wireless Activity & Sleep Tracker, Burgundy",
-    "price": "89.95",
+    "price": "$89.95",
     "body_location": "Waist",
     "category": "Lifestyle",
     "_id": 6678,
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "Fitbit Zip Wireless Activity Tracker, Lime",
-    "price": "53.99",
+    "price": "$53.99",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6682,
@@ -1011,7 +1011,7 @@
   },
   {
     "name": "Freehand Glove Kit",
-    "price": "322.58",
+    "price": "$322.58",
     "body_location": "Hands",
     "category": "Medical",
     "_id": 6684,
@@ -1021,7 +1021,7 @@
   },
   {
     "name": "Garmin - Heart rate monitor - for Colorado 300,400c, and more",
-    "price": "36.29",
+    "price": "$36.29",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6686,
@@ -1031,7 +1031,7 @@
   },
   {
     "name": "Garmin - Heart rate monitor strap - for Edge 205,305, and more",
-    "price": "5.75",
+    "price": "$5.75",
     "body_location": "Waist",
     "category": "Medical",
     "_id": 6687,
@@ -1041,7 +1041,7 @@
   },
   {
     "name": "Garmin - Premium - Heart rate monitor - for Edge 705; Forerunner 305, and more",
-    "price": "35.99",
+    "price": "$35.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6688,
@@ -1051,7 +1051,7 @@
   },
   {
     "name": "Garmin - vofit Fitness Band with Heart Rate Monitor - Red",
-    "price": "119.99",
+    "price": "$119.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6689,
@@ -1061,7 +1061,7 @@
   },
   {
     "name": "Garmin 010-N0863-32 Forerunner 210 GPS Receiver w/ Heart Rate Monitor",
-    "price": "209.11",
+    "price": "$209.11",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6692,
@@ -1071,7 +1071,7 @@
   },
   {
     "name": "Garmin fenix 2 - Hiking, running GPS watch - 1.2\" monochrome - 70 x 70",
-    "price": "399.99",
+    "price": "$399.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6695,
@@ -1081,7 +1081,7 @@
   },
   {
     "name": "Garmin Forerunner 10 - Running GPS receiver - Monochrome - 55 x 32, Purple/White",
-    "price": "129.99",
+    "price": "$129.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6696,
@@ -1091,7 +1091,7 @@
   },
   {
     "name": "Garmin Forerunner 10 GPS Running Watch, Black/Red",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6697,
@@ -1101,7 +1101,7 @@
   },
   {
     "name": "Garmin Forerunner 10 Running GPS Receiver - Monochrome - 55 x 32, Green/White",
-    "price": "129.99",
+    "price": "$129.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6704,
@@ -1111,7 +1111,7 @@
   },
   {
     "name": "Garmin Forerunner 10 Running GPS Receiver, Monochrome",
-    "price": "129.99",
+    "price": "$129.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6705,
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "Garmin Forerunner 10 Running GPS receiver, Monochrome, 55 x 32, Pink/White",
-    "price": "129.99",
+    "price": "$129.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6706,
@@ -1131,7 +1131,7 @@
   },
   {
     "name": "Garmin Forerunner 15 - Running GPS watch - Monochrome - 55 x 32",
-    "price": "169.99",
+    "price": "$169.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6707,
@@ -1141,7 +1141,7 @@
   },
   {
     "name": "Garmin Forerunner 210",
-    "price": "167.33",
+    "price": "$167.33",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6708,
@@ -1151,7 +1151,7 @@
   },
   {
     "name": "Garmin Forerunner 210 Special Edition, White/Green/Blue",
-    "price": "163.99",
+    "price": "$163.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6709,
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "Garmin ForeRunner 210 with Heart Rate Monitor, Black",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6710,
@@ -1171,7 +1171,7 @@
   },
   {
     "name": "Garmin Forerunner 220 - Running GPS watch - 1\" 180 x 180",
-    "price": "249.99",
+    "price": "$249.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6712,
@@ -1181,7 +1181,7 @@
   },
   {
     "name": "Garmin Forerunner 610 Running GPS receiver - 1\" Monochrome - 128 x 128",
-    "price": "129.99",
+    "price": "$129.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6715,
@@ -1191,7 +1191,7 @@
   },
   {
     "name": "Garmin Forerunner 620 - Running GPS watch - 1\" 180 x 180",
-    "price": "400",
+    "price": "$400",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6717,
@@ -1201,7 +1201,7 @@
   },
   {
     "name": "Garmin Forerunner 910XT - Running GPS watch - Monochrome - 160 x 100",
-    "price": "399.99",
+    "price": "$399.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6718,
@@ -1211,7 +1211,7 @@
   },
   {
     "name": "Garmin HRM-Run Heart Rate Monitor Black",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6722,
@@ -1221,7 +1221,7 @@
   },
   {
     "name": "Garmin International Garmin vofit Bundle - Activity tracking wristband - blue (010-01225-34)",
-    "price": "169.99",
+    "price": "$169.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6723,
@@ -1231,7 +1231,7 @@
   },
   {
     "name": "Garmin Small Vivofit Replacement Bands, Black/Red/Slate",
-    "price": "24.99",
+    "price": "$24.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6724,
@@ -1241,7 +1241,7 @@
   },
   {
     "name": "Garmin tempe Wireless Temperature Sensor - Temperature sensor",
-    "price": "26.95",
+    "price": "$26.95",
     "body_location": "Waist",
     "category": "Lifestyle",
     "_id": 6725,
@@ -1251,7 +1251,7 @@
   },
   {
     "name": "Garmin VIRB 16.0 MP Action camera - 1080p",
-    "price": "187.82",
+    "price": "$187.82",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6727,
@@ -1261,7 +1261,7 @@
   },
   {
     "name": "Garmin VIRB Elite 1080p HD Action Camera with Wi-Fi and GPS",
-    "price": "249.99",
+    "price": "$249.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6728,
@@ -1271,7 +1271,7 @@
   },
   {
     "name": "Garmin Vivofit Fitness Band - HRM Bundle - Teal",
-    "price": "119.99",
+    "price": "$119.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6734,
@@ -1281,7 +1281,7 @@
   },
   {
     "name": "Garmin Vivofit Fitness Band Bundle with Heart Rate Monitor/2 Bracelets/USB Ant Stick, Purple",
-    "price": "141.99",
+    "price": "$141.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6738,
@@ -1291,7 +1291,7 @@
   },
   {
     "name": "Garmin Vivofit Fitness Band, Blue",
-    "price": "129.99",
+    "price": "$129.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6739,
@@ -1301,7 +1301,7 @@
   },
   {
     "name": "Garmin Vivofita,, Fitness Band With Heart Rate Monitor",
-    "price": "169.99",
+    "price": "$169.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6740,
@@ -1311,7 +1311,7 @@
   },
   {
     "name": "Garmin vosmart - Large - activity tracker - monochrome - Bluetooth, ANT/ANT+ - 0.7 oz - purple",
-    "price": "169.99",
+    "price": "$169.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6741,
@@ -1321,7 +1321,7 @@
   },
   {
     "name": "Garmin vosmart - Small - activity tracker - monochrome - Bluetooth, ANT/ANT+ - 0.7 oz - black - with heart rate monitor",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6742,
@@ -1331,7 +1331,7 @@
   },
   {
     "name": "Garmin vosmart - Small - activity tracker - monochrome - Bluetooth, ANT/ANT+ - 0.7 oz - slate",
-    "price": "169.99",
+    "price": "$169.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6743,
@@ -1341,7 +1341,7 @@
   },
   {
     "name": "Genuine Samsung Smart Watch For Galaxy Note 3 Gear Fit Galaxy S5 S4",
-    "price": "149.99",
+    "price": "$149.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6745,
@@ -1351,7 +1351,7 @@
   },
   {
     "name": "Gerbing Men's Battery Heated Fleece Jacket - Black",
-    "price": "229.99",
+    "price": "$229.99",
     "body_location": "Torso",
     "category": "Lifestyle",
     "_id": 6746,
@@ -1361,7 +1361,7 @@
   },
   {
     "name": "GoFit GF-WTSLD Power Sled with Harness & Strap",
-    "price": "91.99",
+    "price": "$91.99",
     "body_location": "Torso",
     "category": "Fitness",
     "_id": 6748,
@@ -1371,7 +1371,7 @@
   },
   {
     "name": "Golf Buddy Voice GPS Range Finder",
-    "price": "99.95",
+    "price": "$99.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6750,
@@ -1381,7 +1381,7 @@
   },
   {
     "name": "Golf Buddy VT3 Black Golf Voice GPS Rangefinder Preloaded Courses",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6751,
@@ -1391,7 +1391,7 @@
   },
   {
     "name": "HBsuper by HoodieBuddie Boys' Lightweight Hoodie, Sizes S-xl - Bloomingdale's Exclusive",
-    "price": "64",
+    "price": "$64",
     "body_location": "Torso",
     "category": "Lifestyle",
     "_id": 6763,
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "HealthSmart Digital 3-Dimension Pocket Pedometer",
-    "price": "11.98",
+    "price": "$11.98",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6766,
@@ -1411,7 +1411,7 @@
   },
   {
     "name": "HealthSmart Ring Heart Rate Monitor, Red",
-    "price": "24.78",
+    "price": "$24.78",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6767,
@@ -1421,7 +1421,7 @@
   },
   {
     "name": "High Tech Pet MS-4 Digital, Water-Resistant Ultrasonic Collar",
-    "price": "34.99",
+    "price": "$34.99",
     "body_location": "Neck",
     "category": "Pets and Animals",
     "_id": 6771,
@@ -1431,7 +1431,7 @@
   },
   {
     "name": "High Tech Pet RX-10 Dog Collar for Pet Doors",
-    "price": "76.29",
+    "price": "$76.29",
     "body_location": "Neck",
     "category": "Pets and Animals",
     "_id": 6772,
@@ -1441,7 +1441,7 @@
   },
   {
     "name": "ibitz - Kids PowerKey Wireless Activity Monitor - Watermelon",
-    "price": "30.99",
+    "price": "$30.99",
     "body_location": "Waist",
     "category": "Medical",
     "_id": 6773,
@@ -1451,7 +1451,7 @@
   },
   {
     "name": "Ifit Tracker Band & Clip",
-    "price": "79",
+    "price": "$79",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6776,
@@ -1461,7 +1461,7 @@
   },
   {
     "name": "IK Multimedia iRing White",
-    "price": "24.99",
+    "price": "$24.99",
     "body_location": "Hands",
     "category": "Entertainment",
     "_id": 6780,
@@ -1471,7 +1471,7 @@
   },
   {
     "name": "Impact Sports Technologies ePulse2 Heart Rate Monitor and Calorimeter",
-    "price": "83.63",
+    "price": "$83.63",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6781,
@@ -1481,7 +1481,7 @@
   },
   {
     "name": "Insten Mini Digital LCD Pedometer, Black",
-    "price": "3.99",
+    "price": "$3.99",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6782,
@@ -1491,7 +1491,7 @@
   },
   {
     "name": "iON Air Pro 2 Wi-Fi 14.0 MP Action camera - 1080p",
-    "price": "149.99",
+    "price": "$149.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6784,
@@ -1501,7 +1501,7 @@
   },
   {
     "name": "iriverOn - headset - Ear-bud - Black",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6786,
@@ -1511,7 +1511,7 @@
   },
   {
     "name": "Jawbone - Up - Activity tracking wristband - small size - Blue - for Apple iPad; iPad 1; and more",
-    "price": "57.99",
+    "price": "$57.99",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6788,
@@ -1521,7 +1521,7 @@
   },
   {
     "name": "Jawbone - Up Wristband (large) - Onyx",
-    "price": "57.99",
+    "price": "$57.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6789,
@@ -1531,7 +1531,7 @@
   },
   {
     "name": "Jawbone Up Activity Tracker Wristband, Small, Red",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6790,
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "Jawbone Up Blue Medium Tracking Wrist Band",
-    "price": "59.95",
+    "price": "$59.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6791,
@@ -1551,7 +1551,7 @@
   },
   {
     "name": "Jawbone UP Fitness Wristband - Onyx - Small (42245SPR)",
-    "price": "72.59 (refurbished)",
+    "price": "$72.59 (refurbished)",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6792,
@@ -1561,7 +1561,7 @@
   },
   {
     "name": "Jawbone UP Wristband - Small - Retail Packaging - Light Grey",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6793,
@@ -1571,7 +1571,7 @@
   },
   {
     "name": "Jawbone UP24 Activity Tracker Wristband, Pink Coral, M",
-    "price": "129.99",
+    "price": "$129.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6794,
@@ -1581,7 +1581,7 @@
   },
   {
     "name": "Jawbone Up24 Onyx Large Tracking Wrist Band",
-    "price": "119.99",
+    "price": "$119.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6795,
@@ -1591,7 +1591,7 @@
   },
   {
     "name": "Jawbone Wristband, persimmon, Medium",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6796,
@@ -1601,7 +1601,7 @@
   },
   {
     "name": "LG G Watch, Black Titan",
-    "price": "149.99",
+    "price": "$149.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6815,
@@ -1611,7 +1611,7 @@
   },
   {
     "name": "LG G Watch, White Gold",
-    "price": "149.99",
+    "price": "$149.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6816,
@@ -1621,7 +1621,7 @@
   },
   {
     "name": "LG LGW100-AUSAKT Watches",
-    "price": "149.99",
+    "price": "$149.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6817,
@@ -1631,7 +1631,7 @@
   },
   {
     "name": "LG Lifeband Touch FB84-BL - Large - activity tracker - 0.91\" - Bluetooth - 1.6 oz - black",
-    "price": "126.99",
+    "price": "$126.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6818,
@@ -1641,7 +1641,7 @@
   },
   {
     "name": "LG Lifeband Touch FB84-BM - Medium - activity tracker - 0.91\" - Bluetooth - 1.6 oz - black",
-    "price": "126.99",
+    "price": "$126.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6819,
@@ -1651,7 +1651,7 @@
   },
   {
     "name": "LifeTrak C200 Core Fitness Watch - Black/White",
-    "price": "39.99",
+    "price": "$39.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6820,
@@ -1661,7 +1661,7 @@
   },
   {
     "name": "LifeTrak Core C210 (Midnight Black/Titanium)",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6821,
@@ -1671,7 +1671,7 @@
   },
   {
     "name": "LifeTrak Zone C410 - Activity tracker - two-color (monochrome) - Bluetooth - white",
-    "price": "55.99",
+    "price": "$55.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6822,
@@ -1681,7 +1681,7 @@
   },
   {
     "name": "Liquid Image 720p XSC All Sport Camera/Video Goggles - White",
-    "price": "299.99",
+    "price": "$299.99",
     "body_location": "Head",
     "category": "Fitness",
     "_id": 6825,
@@ -1691,7 +1691,7 @@
   },
   {
     "name": "Magellan Echo Fitness Watch, Gray MENTW0103SGXNA",
-    "price": "93.36",
+    "price": "$93.36",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6833,
@@ -1701,7 +1701,7 @@
   },
   {
     "name": "Magellan Switch Crossover GPS Watch",
-    "price": "149.99",
+    "price": "$149.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6834,
@@ -1711,7 +1711,7 @@
   },
   {
     "name": "Martian Watches G2C (Red Face & Band)",
-    "price": "249",
+    "price": "$249",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6836,
@@ -1721,7 +1721,7 @@
   },
   {
     "name": "Martian Watches G2C (Turquoise Face & Band)",
-    "price": "249",
+    "price": "$249",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6837,
@@ -1731,7 +1731,7 @@
   },
   {
     "name": "Martian Watches G2C (White Face & Band)",
-    "price": "249",
+    "price": "$249",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6838,
@@ -1741,7 +1741,7 @@
   },
   {
     "name": "Martian Watches Passport & Black Leather Band",
-    "price": "299",
+    "price": "$299",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6840,
@@ -1751,7 +1751,7 @@
   },
   {
     "name": "Martian Watches Passport & Black Silicone Band",
-    "price": "299",
+    "price": "$299",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6841,
@@ -1761,7 +1761,7 @@
   },
   {
     "name": "Martian Watches Passport & White Leather Band",
-    "price": "299",
+    "price": "$299",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6842,
@@ -1771,7 +1771,7 @@
   },
   {
     "name": "Martian Watches Victory Watch (Black Back Plate, Case, & Band)",
-    "price": "299",
+    "price": "$299",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6843,
@@ -1781,7 +1781,7 @@
   },
   {
     "name": "Men's Casio Hunting Twin-Sensor Watch - multicolor (one size)",
-    "price": "58.99",
+    "price": "$58.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6846,
@@ -1791,7 +1791,7 @@
   },
   {
     "name": "Men's casio sports running gear pedometer watch sgw200-1v",
-    "price": "55.99",
+    "price": "$55.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6847,
@@ -1801,7 +1801,7 @@
   },
   {
     "name": "Men's ourCaste 'The Saul - Tech' Waterproof Stretch Jacket Mens Light Grey Size Small",
-    "price": "99",
+    "price": "$99",
     "body_location": "Torso",
     "category": "Lifestyle",
     "_id": 6848,
@@ -1811,7 +1811,7 @@
   },
   {
     "name": "MetaWatch M1 Core Smartwatch",
-    "price": "349",
+    "price": "$349",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6849,
@@ -1821,7 +1821,7 @@
   },
   {
     "name": "MIDLAND XTC260VP3 Action camera - 720p - Black, silver",
-    "price": "73.31",
+    "price": "$73.31",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6851,
@@ -1831,7 +1831,7 @@
   },
   {
     "name": "MIDLAND XTC280VP Action camera - 1080p - Black, silver",
-    "price": "125.99",
+    "price": "$125.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6853,
@@ -1841,7 +1841,7 @@
   },
   {
     "name": "MIDLAND XTC285VP Action camera - 1080p - Mossy oak camouflage",
-    "price": "121.99",
+    "price": "$121.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6855,
@@ -1851,7 +1851,7 @@
   },
   {
     "name": "MIDLAND XTC300VP4 Action camera - 1080p",
-    "price": "150.19",
+    "price": "$150.19",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6856,
@@ -1861,7 +1861,7 @@
   },
   {
     "name": "MIDLAND XTC400 Action camera - 1080p",
-    "price": "185.99",
+    "price": "$185.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6857,
@@ -1871,7 +1871,7 @@
   },
   {
     "name": "Mio 53PBLU - Alpha Heart Rate Sport Watch - Indigo",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6864,
@@ -1881,7 +1881,7 @@
   },
   {
     "name": "Mio Alpha Heart Rate Monitor, Black",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6865,
@@ -1891,7 +1891,7 @@
   },
   {
     "name": "Misfit - Flash Activity Tracker - Frost",
-    "price": "49.99",
+    "price": "$49.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6867,
@@ -1901,7 +1901,7 @@
   },
   {
     "name": "Misfit Shine Activity Monitor - Wine",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6868,
@@ -1911,7 +1911,7 @@
   },
   {
     "name": "Misfit Shine Activity Tracker in Silver",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6869,
@@ -1921,7 +1921,7 @@
   },
   {
     "name": "Misfit Wearables - Band - Tan",
-    "price": "35.99",
+    "price": "$35.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6870,
@@ -1931,7 +1931,7 @@
   },
   {
     "name": "Misfit Wearables Bloom Necklace for Shine",
-    "price": "79.99",
+    "price": "$79.99",
     "body_location": "Neck",
     "category": "Lifestyle",
     "_id": 6871,
@@ -1941,7 +1941,7 @@
   },
   {
     "name": "Misfit Wearables Fitness Assessment Leather Band, Black",
-    "price": "37.99",
+    "price": "$37.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6872,
@@ -1951,7 +1951,7 @@
   },
   {
     "name": "Misfit Wearables Shine Activity and Sleep Monitor Champagne SH0HZ",
-    "price": "89.88",
+    "price": "$89.88",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6873,
@@ -1961,7 +1961,7 @@
   },
   {
     "name": "Misfit Wearables Sport Necklace for Shine",
-    "price": "49.99",
+    "price": "$49.99",
     "body_location": "Neck",
     "category": "Fitness",
     "_id": 6874,
@@ -1971,7 +1971,7 @@
   },
   {
     "name": "Monoprice 110161 MHD Action Camera Helmet Mount",
-    "price": "13.39",
+    "price": "$13.39",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6875,
@@ -1981,7 +1981,7 @@
   },
   {
     "name": "Monoprice 110630 Chest Mount for MHD Sport Wi-Fi Action Camera",
-    "price": "10.28",
+    "price": "$10.28",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6876,
@@ -1991,7 +1991,7 @@
   },
   {
     "name": "Monoprice MHD Sport WiFi Action Camera ...",
-    "price": "226.99",
+    "price": "$226.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6877,
@@ -2001,7 +2001,7 @@
   },
   {
     "name": "Mota G2 Pro Bluetooth Smartwatch for iPhone and Android - Silver",
-    "price": "79.95",
+    "price": "$79.95",
     "body_location": "Wrist",
     "category": "Entertainment",
     "_id": 6878,
@@ -2011,7 +2011,7 @@
   },
   {
     "name": "MOTA Mota MT-SWG2BL Wrist Watch - Smartwatch G2 Digital Quartz",
-    "price": "79.99",
+    "price": "$79.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6879,
@@ -2021,7 +2021,7 @@
   },
   {
     "name": "Mota MT-SWG2BL Black Rechargeable Bluetooth Smartwatch G2 (Large Wrist model)",
-    "price": "59.43",
+    "price": "$59.43",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6880,
@@ -2031,7 +2031,7 @@
   },
   {
     "name": "Mota 360, Light Stainless Steel",
-    "price": "299.99",
+    "price": "$299.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6881,
@@ -2041,7 +2041,7 @@
   },
   {
     "name": "Motorola Moto 360 Wireless Charging Dock",
-    "price": "39.99",
+    "price": "$39.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6884,
@@ -2051,7 +2051,7 @@
   },
   {
     "name": "New Suunto Watch XLANDER X Lander Black Negative Military Computer SS012197310",
-    "price": "255",
+    "price": "$255",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6888,
@@ -2061,7 +2061,7 @@
   },
   {
     "name": "Nike+ FuelBand SE - Medium/Large - activity tracker - Bluetooth - 1.1 oz - black, pink foil",
-    "price": "99",
+    "price": "$99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6889,
@@ -2071,7 +2071,7 @@
   },
   {
     "name": "Omron HJ-321 Tri-Axis Pedometer with Calories Burned",
-    "price": "14.49",
+    "price": "$14.49",
     "body_location": "Waist",
     "category": "Medical",
     "_id": 6890,
@@ -2081,7 +2081,7 @@
   },
   {
     "name": "Omron HJ-323U Five Function USB Pedometer-Retail Packaged",
-    "price": "26.59",
+    "price": "$26.59",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6891,
@@ -2091,7 +2091,7 @@
   },
   {
     "name": "Omron HJ329 Alvita Ultimate Digital Fitness Pedometer",
-    "price": "25",
+    "price": "$25",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6892,
@@ -2101,7 +2101,7 @@
   },
   {
     "name": "Omron Pocket Pedometer with Health Management Software",
-    "price": "33.90",
+    "price": "$33.90",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6893,
@@ -2111,7 +2111,7 @@
   },
   {
     "name": "Omron Strapless Heart Rate Monitor",
-    "price": "27.51",
+    "price": "$27.51",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6894,
@@ -2121,7 +2121,7 @@
   },
   {
     "name": "Omron Tri Axis Pedometer",
-    "price": "9.49",
+    "price": "$9.49",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6895,
@@ -2131,7 +2131,7 @@
   },
   {
     "name": "Omron-Heart Monitor W Tap Lens OMRHR310",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6896,
@@ -2141,7 +2141,7 @@
   },
   {
     "name": "Onanoff Magnum HD Noise-Isolating Earbuds with In-Line Mic, Gunmetal with Wearable Magneat",
-    "price": "39.95",
+    "price": "$39.95",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6897,
@@ -2151,7 +2151,7 @@
   },
   {
     "name": "Papago GoLife Care Smart Fit Band (Silver/White)",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6902,
@@ -2161,7 +2161,7 @@
   },
   {
     "name": "Papago! GoWatch 770 GPS Multi-Sports Watch - Yellow Belt",
-    "price": "119.99",
+    "price": "$119.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6903,
@@ -2171,7 +2171,7 @@
   },
   {
     "name": "Pebble - Steel Smart Watch for Select IOS and Android Devices - Black",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6905,
@@ -2181,7 +2181,7 @@
   },
   {
     "name": "Pebble - Steel Smart Watch for Select IOS and Android Devices - Silver",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6906,
@@ -2191,7 +2191,7 @@
   },
   {
     "name": "Pebble Smart Watch for iPhone and Android Devices (Black)",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6907,
@@ -2201,7 +2201,7 @@
   },
   {
     "name": "Pebble Smartwatch with Automatic Lap Counter",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6911,
@@ -2211,7 +2211,7 @@
   },
   {
     "name": "Pebble Steel Smart Watch For Iphone And Android Devices (black",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6912,
@@ -2221,7 +2221,7 @@
   },
   {
     "name": "Polar - Loop Activity Tracker - Purple",
-    "price": "77.95",
+    "price": "$77.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6917,
@@ -2231,7 +2231,7 @@
   },
   {
     "name": "Polar - Stride Sensor Bluetooth Smart - Stride sensor - for Polar V800",
-    "price": "54.95",
+    "price": "$54.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6918,
@@ -2241,7 +2241,7 @@
   },
   {
     "name": "Polar 2014 FT60 Heart Rate Monitor Watch (White) ...",
-    "price": "159.99",
+    "price": "$159.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6920,
@@ -2251,7 +2251,7 @@
   },
   {
     "name": "Polar 90044686 RC3 GPS Sports Watch - without Heart Rate",
-    "price": "167.99",
+    "price": "$167.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6921,
@@ -2261,7 +2261,7 @@
   },
   {
     "name": "Polar 92052231 - H7 Heart Rate Sensor M-XXL - Pink",
-    "price": "55.69",
+    "price": "$55.69",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6922,
@@ -2271,7 +2271,7 @@
   },
   {
     "name": "Polar CS600X Computer Black/Silver 90034225",
-    "price": "378",
+    "price": "$378",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6923,
@@ -2281,7 +2281,7 @@
   },
   {
     "name": "Polar CS600X GPS (G5) w/KEO Power Set 90043366",
-    "price": "2,495.00",
+    "price": "$2,495.00",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6924,
@@ -2291,7 +2291,7 @@
   },
   {
     "name": "Polar Electro, Inc Polar RC3 GPS with heart rate - GPS watch - cycle, running (90048177)",
-    "price": "349.99",
+    "price": "$349.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6925,
@@ -2301,7 +2301,7 @@
   },
   {
     "name": "Polar Electro, Inc Polar RCX3 Sports Watch with Heart Rate Monitor White (90042218)",
-    "price": "127.95",
+    "price": "$127.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6926,
@@ -2311,7 +2311,7 @@
   },
   {
     "name": "Polar FT1 Heart Rate Monitor",
-    "price": "41.29",
+    "price": "$41.29",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6927,
@@ -2321,7 +2321,7 @@
   },
   {
     "name": "Polar FT2 Heart Rate Monitor Blue, One Size",
-    "price": "46.37",
+    "price": "$46.37",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6928,
@@ -2331,7 +2331,7 @@
   },
   {
     "name": "Polar FT4 Heart Rate Monitor Watch, Green",
-    "price": "57.44",
+    "price": "$57.44",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6930,
@@ -2341,7 +2341,7 @@
   },
   {
     "name": "Polar FT4 Heart Rate Monitorm, Men's, Silver/Black",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6931,
@@ -2351,7 +2351,7 @@
   },
   {
     "name": "Polar FT60 - Activity tracker - monochrome - white - with heart rate sensor",
-    "price": "159.99",
+    "price": "$159.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6932,
@@ -2361,7 +2361,7 @@
   },
   {
     "name": "Polar FT60 Heart Rate Monitor Watch Set (Black) 90040869",
-    "price": "143.96",
+    "price": "$143.96",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6933,
@@ -2371,7 +2371,7 @@
   },
   {
     "name": "Polar FT60 Men's Heart Rate Monitor Watch, Black",
-    "price": "159.99",
+    "price": "$159.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6934,
@@ -2381,7 +2381,7 @@
   },
   {
     "name": "Polar FT60F Exercise Watch / Heart Rate Monitor- Black",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6935,
@@ -2391,7 +2391,7 @@
   },
   {
     "name": "Polar FT7 - 91966-f7 - Health Care Biometric Heart Rate Monitors",
-    "price": "70.99",
+    "price": "$70.99",
     "body_location": "Chest",
     "category": "Medical",
     "_id": 6936,
@@ -2401,7 +2401,7 @@
   },
   {
     "name": "Polar FT7 - Activity tracker - monochrome - black/red - with heart rate sensor",
-    "price": "68",
+    "price": "$68",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6937,
@@ -2411,7 +2411,7 @@
   },
   {
     "name": "Polar FT7 Heart Rate Monitor Red/Orange: Polar Heart Rate Monitors",
-    "price": "68",
+    "price": "$68",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6939,
@@ -2421,7 +2421,7 @@
   },
   {
     "name": "Polar FT7 Heart Rate Monitor, Blue/Lilac",
-    "price": "68",
+    "price": "$68",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6940,
@@ -2431,7 +2431,7 @@
   },
   {
     "name": "Polar G1 GPS Speed and Distance Sensor for FT60 / FT80",
-    "price": "99.43",
+    "price": "$99.43",
     "body_location": "Arms",
     "category": "Fitness",
     "_id": 6941,
@@ -2441,7 +2441,7 @@
   },
   {
     "name": "Polar H1 Heart Rate Transmitter and Strap Set, XXL",
-    "price": "44.95",
+    "price": "$44.95",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6943,
@@ -2451,7 +2451,7 @@
   },
   {
     "name": "Polar H1/H2 Heart Rate Transmitter Soft Strap: XS/SM",
-    "price": "16.95",
+    "price": "$16.95",
     "body_location": "Chest",
     "category": "Medical",
     "_id": 6944,
@@ -2461,7 +2461,7 @@
   },
   {
     "name": "Polar H6 - Heart rate sensor for Apple iPad (3rd generation); iPad mini; and more",
-    "price": "44.98",
+    "price": "$44.98",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6945,
@@ -2471,7 +2471,7 @@
   },
   {
     "name": "Polar H7 - Heart rate sensor for Apple iPhone 4S, 5",
-    "price": "51.98",
+    "price": "$51.98",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6946,
@@ -2481,7 +2481,7 @@
   },
   {
     "name": "Polar Heart Rate Monitors, Women's Fit, Pink/Purple",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6948,
@@ -2491,7 +2491,7 @@
   },
   {
     "name": "Polar Loop Activity Tracker Fitness Band Black Bundle 90053552",
-    "price": "159.95",
+    "price": "$159.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6949,
@@ -2501,7 +2501,7 @@
   },
   {
     "name": "Polar RC3 GPS Bike Heart Rate Monitor 90048179",
-    "price": "259.77",
+    "price": "$259.77",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6950,
@@ -2511,7 +2511,7 @@
   },
   {
     "name": "Polar RC3 GPS Fitness Watch with Heart Rate Monitor (Blue)",
-    "price": "179.95",
+    "price": "$179.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6951,
@@ -2521,7 +2521,7 @@
   },
   {
     "name": "Polar RC3 GPS Sports Heart Rate Monitor - Bike",
-    "price": "349.95",
+    "price": "$349.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6952,
@@ -2531,7 +2531,7 @@
   },
   {
     "name": "Polar RCX3 Run Package Heart Rate Monitor Black, Men's",
-    "price": "119.95",
+    "price": "$119.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6953,
@@ -2541,7 +2541,7 @@
   },
   {
     "name": "Polar RCX5 Base Training System, Black",
-    "price": "329.99",
+    "price": "$329.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6954,
@@ -2551,7 +2551,7 @@
   },
   {
     "name": "Polar RCX5 Bike Training Sports Watch, Red",
-    "price": "369.95",
+    "price": "$369.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6955,
@@ -2561,7 +2561,7 @@
   },
   {
     "name": "Polar RCX5 Red Watch",
-    "price": "329.95",
+    "price": "$329.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6956,
@@ -2571,7 +2571,7 @@
   },
   {
     "name": "Polar RCX5 Run Heart-Monitor Training Watch, Black (031176482)",
-    "price": "249.97",
+    "price": "$249.97",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6957,
@@ -2581,7 +2581,7 @@
   },
   {
     "name": "Polar RS300X Heart Rate Monitor Watch, Black",
-    "price": "85.97",
+    "price": "$85.97",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6958,
@@ -2591,7 +2591,7 @@
   },
   {
     "name": "Polar RS400-sd Exercise Watch / Heart Rate Monitor",
-    "price": "279.95",
+    "price": "$279.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6959,
@@ -2601,7 +2601,7 @@
   },
   {
     "name": "Polar RS800CX B Heart Rate Monitor Watch 90038980",
-    "price": "449.95",
+    "price": "$449.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6960,
@@ -2611,7 +2611,7 @@
   },
   {
     "name": "Polar RS800CX GPS Heart Rate Monitor",
-    "price": "499.95",
+    "price": "$499.95",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6961,
@@ -2621,7 +2621,7 @@
   },
   {
     "name": "Polar RS800CX Heart Rate Monitor Watch 90038974",
-    "price": "419.95",
+    "price": "$419.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6962,
@@ -2631,7 +2631,7 @@
   },
   {
     "name": "Polar S-1 Foot Pod 91027204",
-    "price": "89.99",
+    "price": "$89.99",
     "body_location": "Feet",
     "category": "Fitness",
     "_id": 6963,
@@ -2641,7 +2641,7 @@
   },
   {
     "name": "Polar V800 GPS Sports Watch with Heart Rate Black",
-    "price": "449.95",
+    "price": "$449.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6964,
@@ -2651,7 +2651,7 @@
   },
   {
     "name": "Polar Wear Link Bluetooth Transmitter Set (Medium/XX-Large)",
-    "price": "79.95",
+    "price": "$79.95",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6965,
@@ -2661,7 +2661,7 @@
   },
   {
     "name": "Polar Wearlink Transmitter Nike + Heart Rate Sensor",
-    "price": "45.45",
+    "price": "$45.45",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6966,
@@ -2671,7 +2671,7 @@
   },
   {
     "name": "POV Action Video Cameras - PRO24 - POV Action Video PRO24 POV SD Action Camera Eyewear (Black)",
-    "price": "111.95",
+    "price": "$111.95",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 6971,
@@ -2681,7 +2681,7 @@
   },
   {
     "name": "Pyle PHRM34 Heart Rate Monitor Watch with Calorie Counter",
-    "price": "22.25",
+    "price": "$22.25",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6976,
@@ -2691,7 +2691,7 @@
   },
   {
     "name": "Pyle PHRM38 Heart Rate Monitor Watch with minimum, Average Heart Rate, Calorie Counter and Target Zones, Black",
-    "price": "21.22",
+    "price": "$21.22",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6977,
@@ -2701,7 +2701,7 @@
   },
   {
     "name": "Pyle PHRM38SL Heart Rate Monitor Watch, Silver",
-    "price": "24.99",
+    "price": "$24.99",
     "body_location": "Wrist",
     "category": "Medical",
     "_id": 6978,
@@ -2711,7 +2711,7 @@
   },
   {
     "name": "Pyle PPDE60 Pedometer with Personalized Calibration for Walking & Runn",
-    "price": "21.32",
+    "price": "$21.32",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 6979,
@@ -2721,7 +2721,7 @@
   },
   {
     "name": "Pyle PPDM1 Digital Heart Rate Monitor",
-    "price": "39",
+    "price": "$39",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6980,
@@ -2731,7 +2731,7 @@
   },
   {
     "name": "Pyle PSBTFS40 Bluetooth Wireless Footpod Fitness & Training Sensor",
-    "price": "52.99",
+    "price": "$52.99",
     "body_location": "Feet",
     "category": "Fitness",
     "_id": 6981,
@@ -2741,7 +2741,7 @@
   },
   {
     "name": "Pyle PSBTHR60 Bluetooth Wireless Sport Training Heart Rate Monitor",
-    "price": "74.99",
+    "price": "$74.99",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6982,
@@ -2751,7 +2751,7 @@
   },
   {
     "name": "Pyle PSBTHR70 Bluetooth Fitness Heart Rate Monitoring Watch with Wireless Data Transmission & Sensor, Blue",
-    "price": "67.88",
+    "price": "$67.88",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6983,
@@ -2761,7 +2761,7 @@
   },
   {
     "name": "Pyle PSLPWMP5 Waterproof Pedometer & Lap/Calorie Counter with MP3 Play",
-    "price": "45.24",
+    "price": "$45.24",
     "body_location": "Head",
     "category": "Fitness",
     "_id": 6984,
@@ -2771,7 +2771,7 @@
   },
   {
     "name": "Pyle Pswmr40gy Sports Mens Marathon Runner Watch W/ Target Time",
-    "price": "30",
+    "price": "$30",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 6985,
@@ -2781,7 +2781,7 @@
   },
   {
     "name": "Pyle PSWWM82 Digital Multifunction Sports Watch, Pink PYLPSWWM82PN",
-    "price": "43",
+    "price": "$43",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6986,
@@ -2791,7 +2791,7 @@
   },
   {
     "name": "Pyle PSWWM82 Digital Multifunction Sports Watch, Yellow PYLPSWWM82YL",
-    "price": "43",
+    "price": "$43",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6987,
@@ -2801,7 +2801,7 @@
   },
   {
     "name": "Runtastic - Arm band kit - for Runtastic Orbit",
-    "price": "20.09",
+    "price": "$20.09",
     "body_location": "Arms",
     "category": "Fitness",
     "_id": 6992,
@@ -2811,7 +2811,7 @@
   },
   {
     "name": "Runtastic - Heart Rate Combo Monitor RUNBT1",
-    "price": "69.99",
+    "price": "$69.99",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6993,
@@ -2821,7 +2821,7 @@
   },
   {
     "name": "Runtastic - Receiver and Heart Rate Monitor - Heart rate sensor",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 6994,
@@ -2831,7 +2831,7 @@
   },
   {
     "name": "Runtastic Orbit - Activity tracker - monochrome - Bluetooth",
-    "price": "99",
+    "price": "$99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6995,
@@ -2841,7 +2841,7 @@
   },
   {
     "name": "Runtastic Orbit Activity Tracker",
-    "price": "119.99",
+    "price": "$119.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6996,
@@ -2851,7 +2851,7 @@
   },
   {
     "name": "Samsung - Gear Live Smart Watch for Select Android Devices - Black",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6997,
@@ -2861,7 +2861,7 @@
   },
   {
     "name": "Samsung Galaxy Gear 2 - Smart watch - 1.63\" - 4 GB - Bluetooth - 2 Megapixel camera - 2.4 oz - charcoal black",
-    "price": "285",
+    "price": "$285",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6998,
@@ -2871,7 +2871,7 @@
   },
   {
     "name": "Samsung Galaxy Gear 2 Neo - Smart watch - 1.63\" - 4 GB - Bluetooth - 1.9 oz - Charcoal Black",
-    "price": "169",
+    "price": "$169",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 6999,
@@ -2881,7 +2881,7 @@
   },
   {
     "name": "Samsung Galaxy Gear 2 Neo SM-R381 4GB Mocha Grey Smart Watch",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7000,
@@ -2891,7 +2891,7 @@
   },
   {
     "name": "Samsung Galaxy Gear 2 Neo Smartwatch, Wild Orange",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7001,
@@ -2901,7 +2901,7 @@
   },
   {
     "name": "Samsung Galaxy Gear Fit - Activity tracker - 1.84\" - Bluetooth - 1 oz - charcoal black",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7002,
@@ -2911,7 +2911,7 @@
   },
   {
     "name": "Samsung Galaxy Gear Rose Gold - SM-V700 - Digital - Quartz ...",
-    "price": "129.95",
+    "price": "$129.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7003,
@@ -2921,7 +2921,7 @@
   },
   {
     "name": "Samsung Galaxy Gear Smartwatch (Jet Black)",
-    "price": "119.99",
+    "price": "$119.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7005,
@@ -2931,7 +2931,7 @@
   },
   {
     "name": "Samsung Galaxy Gear Smartwatch (Oatmeal Beige)",
-    "price": "119.99",
+    "price": "$119.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7006,
@@ -2941,7 +2941,7 @@
   },
   {
     "name": "Samsung Galaxy Gear Smartwatch- Retail Packaging - Lime Green",
-    "price": "124.95",
+    "price": "$124.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7008,
@@ -2951,7 +2951,7 @@
   },
   {
     "name": "Samsung Gear 2 Smartwatch - SilverBlack - Titan Silver",
-    "price": "299.99",
+    "price": "$299.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7015,
@@ -2961,7 +2961,7 @@
   },
   {
     "name": "Samsung Gear Live - Smart watch - 1.63\" - 4 GB - Bluetooth - 2.1 oz - black",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7017,
@@ -2971,7 +2971,7 @@
   },
   {
     "name": "Samsung Gear S in White",
-    "price": "349.99",
+    "price": "$349.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7019,
@@ -2981,7 +2981,7 @@
   },
   {
     "name": "Samsung Gear(tm) Fit Band in Red",
-    "price": "49.99",
+    "price": "$49.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7021,
@@ -2991,7 +2991,7 @@
   },
   {
     "name": "Samsung Gear2 Neo Smart Watch Mocha GREY Smartwatch",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7022,
@@ -3001,7 +3001,7 @@
   },
   {
     "name": "Samsung Sm-r3800gnaxar Gear 2 Smartwatch - Brown",
-    "price": "299.99",
+    "price": "$299.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7024,
@@ -3011,7 +3011,7 @@
   },
   {
     "name": "Samsung Sm-r3800moaxar Gear 2 Smartwatch - Metallic",
-    "price": "299.99",
+    "price": "$299.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7025,
@@ -3021,7 +3021,7 @@
   },
   {
     "name": "Scosche BLECS Bluetooth Smart Heart Rate Chest Strap",
-    "price": "19.99",
+    "price": "$19.99",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 7026,
@@ -3031,7 +3031,7 @@
   },
   {
     "name": "Shippingsmart bracelet bluetooth wearable tracking device waterproof p",
-    "price": "125",
+    "price": "$125",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7027,
@@ -3041,7 +3041,7 @@
   },
   {
     "name": "Skechers Go Run SK11 Go Run 2.4 GHz (Black/Silver)",
-    "price": "48.99",
+    "price": "$48.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7028,
@@ -3051,7 +3051,7 @@
   },
   {
     "name": "Skechers Go Walk SK2 Classic Strapless Heart Rate Monitor with Calorie Counter L",
-    "price": "29.99",
+    "price": "$29.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7029,
@@ -3061,7 +3061,7 @@
   },
   {
     "name": "Skechers GOwalk Heart Rate Monitor Fitwatch - Blue",
-    "price": "69.99",
+    "price": "$69.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7030,
@@ -3071,7 +3071,7 @@
   },
   {
     "name": "Skechers SK10 Go Walk Heart Rate Monitor Pulsebandz, Black/Silver",
-    "price": "21.58",
+    "price": "$21.58",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7031,
@@ -3081,7 +3081,7 @@
   },
   {
     "name": "Skechers SK23 Go Walk Activity Tracker/Sleep Monitor, Cranberry",
-    "price": "60.19",
+    "price": "$60.19",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7032,
@@ -3091,7 +3091,7 @@
   },
   {
     "name": "Smart Health Walking Fit Small Heart Rate Watch, Black",
-    "price": "19.99",
+    "price": "$19.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7033,
@@ -3101,7 +3101,7 @@
   },
   {
     "name": "Smartwatch G2 MTSWG2BS",
-    "price": "79.99",
+    "price": "$79.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7034,
@@ -3111,7 +3111,7 @@
   },
   {
     "name": "Smartwatch G2 MTSWG2WL",
-    "price": "79.99",
+    "price": "$79.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7035,
@@ -3121,7 +3121,7 @@
   },
   {
     "name": "Sony Classic Band Set for SWR10 SmartBand (Black/Blue/Orange, Small)",
-    "price": "28.99",
+    "price": "$28.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7037,
@@ -3131,7 +3131,7 @@
   },
   {
     "name": "Sony Fashion Band Set for SWR10 SmartBand (White/Green/Pink, Small)",
-    "price": "29.99",
+    "price": "$29.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7038,
@@ -3141,7 +3141,7 @@
   },
   {
     "name": "Sony HDR-AS30V Digital Hd Action Video Camera, Black",
-    "price": "179.99",
+    "price": "$179.99",
     "body_location": "Head",
     "category": "Entertainment",
     "_id": 7041,
@@ -3151,7 +3151,7 @@
   },
   {
     "name": "Sony MN2SW Smartwatch MN2",
-    "price": "148",
+    "price": "$148",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7043,
@@ -3161,7 +3161,7 @@
   },
   {
     "name": "Sony Mobile Sw2 Smartwatch 2 Black Metal Retail Box 1274-8109 12748109",
-    "price": "199.99",
+    "price": "$199.99",
     "body_location": "Head",
     "category": "Lifestyle",
     "_id": 7044,
@@ -3171,7 +3171,7 @@
   },
   {
     "name": "Sony SW2 Black Smartwatch 2",
-    "price": "124.95",
+    "price": "$124.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7047,
@@ -3181,7 +3181,7 @@
   },
   {
     "name": "Spark Fun Electronics Arduino Lilypad Microcontroller Simple Board",
-    "price": "16.96",
+    "price": "$16.96",
     "body_location": "Wrist",
     "category": "Entertainment",
     "_id": 7048,
@@ -3191,7 +3191,7 @@
   },
   {
     "name": "Sportline 1369650 Step and Distance Pedometer",
-    "price": "14",
+    "price": "$14",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 7050,
@@ -3201,7 +3201,7 @@
   },
   {
     "name": "Sportline 4360011 Solo 915 Heart Rate Watch Womens",
-    "price": "42",
+    "price": "$42",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7051,
@@ -3211,7 +3211,7 @@
   },
   {
     "name": "Sportline CARDIO 630 (Mens) - Activity tracker - monochrome - black - with heart rate sensor",
-    "price": "49.99",
+    "price": "$49.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7052,
@@ -3221,7 +3221,7 @@
   },
   {
     "name": "Sportline CARDIO 630 (Women) - Activity tracker - monochrome - gray - with heart rate sensor",
-    "price": "37.68",
+    "price": "$37.68",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7053,
@@ -3231,7 +3231,7 @@
   },
   {
     "name": "Sportline CARDIO 660 (Mens) - Activity tracker - monochrome - black - with heart rate sensor",
-    "price": "42.43",
+    "price": "$42.43",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7054,
@@ -3241,7 +3241,7 @@
   },
   {
     "name": "Sportline DS Pedometer SP345DS",
-    "price": "24.99",
+    "price": "$24.99",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 7055,
@@ -3251,7 +3251,7 @@
   },
   {
     "name": "Sportline DUO 1060 (Womens) - Activity tracker - monochrome - white - with heart rate sensor",
-    "price": "75.99",
+    "price": "$75.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7056,
@@ -3261,7 +3261,7 @@
   },
   {
     "name": "Sportline Men's Cardio Connect Heart Rate Monitor SP1088BK",
-    "price": "49.95",
+    "price": "$49.95",
     "body_location": "Chest",
     "category": "Medical",
     "_id": 7057,
@@ -3271,7 +3271,7 @@
   },
   {
     "name": "Sportline SOLO 925 (Mens) - Activity tracker - monochrome - black",
-    "price": "56.31",
+    "price": "$56.31",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7058,
@@ -3281,7 +3281,7 @@
   },
   {
     "name": "Sportline SOLO 925 (Womens) - Activity tracker - monochrome - pink",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7059,
@@ -3291,7 +3291,7 @@
   },
   {
     "name": "Sportline SOLO 965 (Mens) - Activity tracker - black",
-    "price": "54.95",
+    "price": "$54.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7060,
@@ -3301,7 +3301,7 @@
   },
   {
     "name": "Sportline SP1045BK EB Brands Duo 1025 Mens Heart Rate Monitor",
-    "price": "65.87",
+    "price": "$65.87",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7061,
@@ -3311,7 +3311,7 @@
   },
   {
     "name": "Sportline SP1921BK Solo 915 Heart Rate Watch Mens",
-    "price": "38.99",
+    "price": "$38.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7062,
@@ -3321,7 +3321,7 @@
   },
   {
     "name": "Sportline Women's Cardio Coded Heart Rate Monitor SP1449WH",
-    "price": "45.30",
+    "price": "$45.30",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7063,
@@ -3331,7 +3331,7 @@
   },
   {
     "name": "Sportline WV1451BK Snapshot Pedometer Heart Rate Monitor",
-    "price": "24.99",
+    "price": "$24.99",
     "body_location": "Waist",
     "category": "Fitness",
     "_id": 7064,
@@ -3341,7 +3341,7 @@
   },
   {
     "name": "Sportline WV1916SL 370 Traq Pedometer",
-    "price": "25.95",
+    "price": "$25.95",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7065,
@@ -3351,7 +3351,7 @@
   },
   {
     "name": "Striiv Fusion Band",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7067,
@@ -3361,7 +3361,7 @@
   },
   {
     "name": "Striiv Touch Fitness Smart Wrist - Black STRV010040A",
-    "price": "79.99",
+    "price": "$79.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7068,
@@ -3371,7 +3371,7 @@
   },
   {
     "name": "TomTom Comfort Strap - Turquoise",
-    "price": "29.95",
+    "price": "$29.95",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7075,
@@ -3381,7 +3381,7 @@
   },
   {
     "name": "TomTom Fitness Comfort Watchband, Turquoise",
-    "price": "11.99",
+    "price": "$11.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7077,
@@ -3391,7 +3391,7 @@
   },
   {
     "name": "TomTom Multi-Sport Cardio + Cycle GPS Watch with HRM 15167948",
-    "price": "269.99",
+    "price": "$269.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7078,
@@ -3401,7 +3401,7 @@
   },
   {
     "name": "Trionic Steampunk Ear Wearable Hearing Aid Wood Jewelry Realistic Tech Costume Prop Life Size",
-    "price": "59.99",
+    "price": "$59.99",
     "body_location": "Head",
     "category": "Medical",
     "_id": 7088,
@@ -3411,7 +3411,7 @@
   },
   {
     "name": "Vuzix 418T00011 Wrap 1200DX Digital Video Eyewear, Black",
-    "price": "81.87",
+    "price": "$81.87",
     "body_location": "Head",
     "category": "Gaming",
     "_id": 7103,
@@ -3421,7 +3421,7 @@
   },
   {
     "name": "Whistle BK897541 WhistleTM Wireless Activity Monitor for Dogs",
-    "price": "99.99",
+    "price": "$99.99",
     "body_location": "Neck",
     "category": "Pets and Animals",
     "_id": 7112,
@@ -3431,7 +3431,7 @@
   },
   {
     "name": "Withings Pulse Activity Sleep/Heart Rate Monitor 70011803",
-    "price": "99.95",
+    "price": "$99.95",
     "body_location": "Chest",
     "category": "Fitness",
     "_id": 7115,
@@ -3441,7 +3441,7 @@
   },
   {
     "name": "Withings Pulse O2 - Activity tracker - Bluetooth - 0.3 oz - black",
-    "price": "119.99",
+    "price": "$119.99",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7116,
@@ -3451,7 +3451,7 @@
   },
   {
     "name": "X-doria KidFit / Health and Fitness - Blue",
-    "price": "39",
+    "price": "$39",
     "body_location": "Wrist",
     "category": "Fitness",
     "_id": 7120,
@@ -3461,7 +3461,7 @@
   },
   {
     "name": "Yes Watch KUNDALINI WTCH w/MIRROR POLISH FINSH",
-    "price": "850",
+    "price": "$850",
     "body_location": "Wrist",
     "category": "Lifestyle",
     "_id": 7121,
@@ -3471,7 +3471,7 @@
   },
   {
     "name": "YOO1 Activity Tracker with Trackit Jacket, Raspberry",
-    "price": "24.99",
+    "price": "$24.99",
     "body_location": "Waist",
     "category": "Lifestyle",
     "_id": 7122,

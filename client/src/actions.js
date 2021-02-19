@@ -115,8 +115,8 @@ export const emptyCart = () => ({
   type: 'EMPTY_CART'
 });
 
-export const updateCartQuantity = (cartId, quantity) => ({
+export const updateCartQuantity = (index, quantity) => ({
   type: 'UPDATE_CART_QUANTITY',
-  cartId,
+  index,
   quantity
 });

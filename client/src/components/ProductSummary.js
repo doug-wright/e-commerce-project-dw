@@ -9,7 +9,7 @@ const ProductSummary = ({ product }) => {
         <Img src={product.imageSrc} />
       </Link>
       <ProductName>{product.name}</ProductName>
-      <ProductPrice>{product.price}</ProductPrice>
+      <ProductPrice>${product.price}</ProductPrice>
       <ProductStock stock={product.numInStock}>{product.numInStock > 0 ? product.numInStock + ' in stock' : 'Out of stock'}</ProductStock>
     </Wrapper>
   );

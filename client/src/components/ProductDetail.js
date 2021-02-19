@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
 
 import {
   requestProductDetail,
   receiveProductDetail,
-  receiveProductDetailError
+  receiveProductDetailError,
+  addToCart
 } from '../actions';
 
 const ProductDetail = () => {
@@ -25,6 +27,17 @@ const ProductDetail = () => {
       .catch((err) => dispatch(receiveProductDetailError()));
   },[dispatch, productId]);
 
+  const handleAddToCart = () => {
+    const newCartItem = {
+      cartId: uuidv4(),
+      productId: product._id,
+      quantity: 1,
+      price: product.price
+    }
+
+    dispatch(addToCart(newCartItem));
+  };
+
   if (status === 'loading') {
     return (
       <div>
@@ -38,8 +51,9 @@ const ProductDetail = () => {
         <Details>
           {product.name}
           <p>By: {product.company.name} <a href={product.company.url}>{product.company.url}</a></p>
+          <p>${product.price}</p>
           <ProductStock stock={product.numInStock}>{product.numInStock > 0 ? product.numInStock + ' in stock' : 'Out of stock'}</ProductStock>
-          <p>{product.numInStock !== 0 ? <Button>Add to cart</Button> : null}</p>
+          <p>{product.numInStock !== 0 ? <Button onClick={handleAddToCart}>Add to cart</Button> : null}</p>
         </Details>
       </Wrapper>
     );
@@ -73,7 +87,7 @@ const ProductStock = styled.p`
 
 const Button = styled.button`
   padding: 5px 15px;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-weight: bold;
   border: none;
   border-radius: 5px;
