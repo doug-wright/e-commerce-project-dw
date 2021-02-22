@@ -88,35 +88,66 @@ export const receiveProductDetailError = () => ({
 });
 
 // Cart actions
-export const requestCart = () => ({
-  type: 'REQUEST_CART',
+export const requestCartItems = () => ({
+  type: 'REQUEST_CART_ITEMS',
 });
 
-export const receiveCart = (cart) => ({
-  type: 'RECEIVE_CART',
+export const receiveCartItems = (cart) => ({
+  type: 'RECEIVE_CART_ITEMS',
   cart
 });
 
-export const receiveCartError = () => ({
-  type: 'RECEIVE_CART_ERROR'
+export const receiveCartItemsError = () => ({
+  type: 'RECEIVE_CART_ITEMS_ERROR'
 });
 
-export const addToCart = (cartItem) => ({
-  type: 'ADD_TO_CART',
+export const requestAddCartItem = () => ({
+  type: 'REQUEST_ADD_CART_ITEM'
+});
+
+export const addCartItem = (cartItem) => ({
+  type: 'ADD_CART_ITEM',
   cartItem
 });
 
-export const removeFromCart = (cartId) => ({
-  type: 'REMOVE_FROM_CART',
+export const addCartItemError = () => ({
+  type: 'ADD_CART_ITEM_ERROR'
+});
+
+export const requestUpdateCartItem = () => ({
+  type: 'REQUEST_UPDATE_CART_ITEM'
+});
+
+export const updateCartItem = (cartItem) => ({
+  type: 'UPDATE_CART_ITEM',
+  cartItem
+});
+
+export const updateCartItemError = () => ({
+  type: 'UPDATE_CART_ITEM_ERROR'
+});
+
+export const requestDeleteCartItem = () => ({
+  type: 'REQUEST_DELETE_CART_ITEM'
+});
+
+export const deleteCartItem = (cartId) => ({
+  type: 'DELETE_CART_ITEM',
   cartId
 });
+
+export const deleteCartItemError = () => ({
+  type: 'DELETE_CART_ITEM_ERROR'
+});
+
+export const requestEmptyCart = () => ({
+  type: 'REQUEST_EMPTY_CART'
+}); 
 
 export const emptyCart = () => ({
   type: 'EMPTY_CART'
 });
 
-export const updateCartQuantity = (index, quantity) => ({
-  type: 'UPDATE_CART_QUANTITY',
-  index,
-  quantity
+export const emptyCartError = () => ({
+  type: 'EMPTY_CART_ERROR'
 });

@@ -17,8 +17,11 @@ const {
   getProductById,
   getProductByFilters,
   getProductByIndex,
-  postItemToCart,
-  getItemsInCart
+  addCartItem,
+  getCartItems,
+  updateCartItem,
+  emptyCart,
+  deleteCartItem
 } = require('./handlers');
 const { response } = require('express');
 
@@ -153,10 +156,10 @@ express()
     }
   })
 
-  // Post item to cart
-  .post('/api/v1/cart', async (req, res) => {
+  // Add cart item
+  .post('/api/v1/cart/:userId', async (req, res) => {
     try {
-      const response = await postItemToCart(req);
+      const response = await addCartItem(req);
 
       res.status(201).json({ status: 201, data: response });
     } catch (err) {
@@ -164,10 +167,43 @@ express()
     }
   })
 
-  // Get items in cart
+  // Get cart items
   .get('/api/v1/cart/:userId', async (req, res) => {
     try {
-      const response = await getItemsInCart(req);
+      const response = await getCartItems(req);
+
+      res.status(200).json({ status: 200, data: response});
+    } catch (err) {
+      res.status(400).json({ status: 400, data: { request: err.request, message: err.message }});
+    }
+  })
+
+  // Update cart item
+  .put('/api/v1/cart/:cartId', async (req, res) => {
+    try {
+      const response = await updateCartItem(req);
+
+      res.status(200).json({ status: 200, data: response});
+    } catch (err) {
+      res.status(400).json({ status: 400, data: { request: err.request, message: err.message }});
+    }
+  })
+
+  // Empty cart
+  .delete('/api/v1/cart/:userId', async (req, res) => {
+    try {
+      const response = await emptyCart(req);
+
+      res.status(200).json({ status: 200, data: response});
+    } catch (err) {
+      res.status(400).json({ status: 400, data: { request: err.request, message: err.message }});
+    }
+  })
+
+  // Delete cart item
+  .patch('/api/v1/cart/:cartId', async (req, res) => {
+    try {
+      const response = await deleteCartItem(req);
 
       res.status(200).json({ status: 200, data: response});
     } catch (err) {

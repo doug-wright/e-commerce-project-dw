@@ -4,7 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { FiShoppingCart } from "react-icons/fi";
 
-import { requestCart, receiveCart, receiveCartError } from '../actions';
+import {
+  requestCartItems,
+  receiveCartItems,
+  receiveCartItemsError
+} from '../actions';
 
 import GlobalStyles from './GlobalStyles';
 import FilterSelect from './FilterSelect';
@@ -20,15 +24,15 @@ function App() {
 
   // Get cart
   useEffect(() => {
-    dispatch(requestCart());
+    dispatch(requestCartItems());
     fetch('/api/v1/cart/' + USER_ID)
       .then(res => res.json())
       .then(json => {
         if (json.status === 200) {
-          dispatch(receiveCart(json.data.cart));
+          dispatch(receiveCartItems(json.data.cart));
         }
       })
-      .catch(err => dispatch(receiveCartError()));
+      .catch(err => dispatch(receiveCartItemsError()));
   }, [dispatch]);
 
   return (
@@ -49,10 +53,6 @@ function App() {
         <Sidebar>
           <FilterSelect />
         </Sidebar>
-        {/* <SubHeader> */}
-          {/* <AppliedFilters /> */}
-        {/* </SubHeader> */}
-        {/* <Router> */}
           <Switch>
             <Route exact path="/">
               <ProductGridContainer>
@@ -60,10 +60,10 @@ function App() {
               </ProductGridContainer>
             </Route>
             <Route exact path="/product/:productId">
-              <ProductDetail />
+              <ProductDetail userId={USER_ID} />
             </Route>
             <Route exact path="/cart">
-              <Cart />
+              <Cart userId={USER_ID} />
             </Route>
           </Switch>
       </Wrapper>
@@ -77,7 +77,6 @@ const Wrapper = styled.div`
   grid-template-rows: 60px;
   grid-template-areas:
     'header header'
-    /* 'sidebar subheader' */
     'sidebar main'
 `;
 
@@ -88,12 +87,7 @@ const Header = styled.div`
   grid-area: header;
   padding: 10px;
   color: white;
-  /* background-color: #404040; */
-  /* background-color: #2f2fa2; */
-  /* background-color: #242582; */
   background-color: #5d5c61;
-  /* background-color: #557a95; */
-  /* background-color: #8265a7; */
 `;
 
 const Logo = styled.span`
@@ -112,7 +106,7 @@ const Navigation = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 75px;
+  /* width: 75px; */
   font-size: 1.3rem;
 `;
 
@@ -127,26 +121,26 @@ const CartContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 35px;
+  width: 45px;
 `;
 
-const CartItems = styled.span`
+const CartItems = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.8rem;
   font-weight: bold;
+  width: 17px;
+  height: 17px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-color: red;
 `;
 
 const Sidebar = styled.div`
   grid-area: sidebar;
-  height: 100vh;
   padding: 5px;
-  border-right: 1px solid #dddddd;
 `;
-
-/* const SubHeader = styled.div`
-  grid-area: subheader;
-  padding: 5px;
-  border-bottom: 1px solid #dddddd;
-`; */
 
 const ProductGridContainer = styled.div`
   grid-area: main;

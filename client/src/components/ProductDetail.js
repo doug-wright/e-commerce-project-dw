@@ -8,12 +8,18 @@ import {
   requestProductDetail,
   receiveProductDetail,
   receiveProductDetailError,
-  addToCart
+  requestAddCartItem,
+  addCartItem,
+  addCartItemError,
+  requestUpdateCartItem,
+  updateCartItem,
+  updateCartItemError
 } from '../actions';
 
-const ProductDetail = () => {
+const ProductDetail = ({ userId }) => {
   const dispatch = useDispatch();
   const { product, status } = useSelector((state) => state.productDetail);
+  const { cart } = useSelector((state) => state.userCart);
   const { productId } = useParams();
 
   useEffect(() => {
@@ -28,14 +34,46 @@ const ProductDetail = () => {
   },[dispatch, productId]);
 
   const handleAddToCart = () => {
-    const newCartItem = {
-      cartId: uuidv4(),
-      productId: product._id,
-      quantity: 1,
-      price: product.price
-    }
+    // Check if product is already in cart
+    const index = cart.findIndex(({ productId }) => productId === product._id);
 
-    dispatch(addToCart(newCartItem));
+    if (index === -1) {
+      // Add new item to cart
+      const newCartItem = {
+        cartId: uuidv4(),
+        productId: product._id,
+        quantity: 1,
+        price: product.price
+      }
+
+      dispatch(requestAddCartItem());
+      fetch('/api/v1/cart/' + userId, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newCartItem)
+      })
+        .then(res => res.json())
+        .then(json => dispatch(addCartItem(newCartItem)))
+        .catch(err => dispatch(addCartItemError));
+    } else {
+      // Add one to existing quantity
+      const updatedCartItem = {
+        cartId: cart[index].cartId,
+        productId: cart[index].productId,
+        quantity: cart[index].quantity + 1,
+        price: cart[index].price
+      };
+
+      dispatch(requestUpdateCartItem());
+      fetch('/api/v1/cart/' + cart[index].cartId, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedCartItem)
+      })
+        .then(res => res.json())
+        .then(json => dispatch(updateCartItem(updatedCartItem)))
+        .catch(err => dispatch(updateCartItemError));
+    }
   };
 
   if (status === 'loading') {
@@ -62,7 +100,7 @@ const ProductDetail = () => {
 
 const Wrapper = styled.div`
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
 `;
 
 const Img = styled.img`

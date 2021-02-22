@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 const companies = require('./data/companies.json');
 const products = require('./data/items.json');
 
-const cart = [];
+let cart = [];
 
 // Get company by id
 const getCompanyById = (id) => {
@@ -202,29 +202,56 @@ const getProductByIndex = (fromIndex, quantity) => {
   });
 };
 
-// Post item to cart
-const postItemToCart = (req) => {
+// Add cart item
+const addCartItem = (req) => {
   return new Promise((resolve, reject) => {
+    const userCartItem = req.body;
+    console.log(userCartItem);
+
     const newCartItem = {
-      cartId: uuidv4(),
-      userId: req.body.userId,
-      productId: req.body.productId,
-      quantity: req.body.quantity,
-      price: req.body.price,
+      cartId: userCartItem.cartId,
+      userId: req.params.userId,
+      productId: userCartItem.productId,
+      quantity: userCartItem.quantity,
+      price: userCartItem.price,
       timestamp: Date.now()
     };
 
     cart.push(newCartItem);
     console.log(cart);
-
-    resolve({ cartId: newCartItem.cartId });
+    resolve({ message: 'Item added'});
   });
 };
 
-// Get items in cart
-const getItemsInCart = (req) => {
+// Update cart item
+const updateCartItem = (req) => {
   return new Promise((resolve, reject) => {
-    // const cartItems = cart.filter(cart => cart.userId === req.params.userId);
+    const userCartItem = req.body;
+    const index = cart.findIndex(({ cartId }) => cartId === req.params.cartId);
+    console.log(userCartItem);
+
+    if (index !== -1) {
+      const newCartItem = {
+        cartId: cart[index].cartId,
+        userId: cart[index].userId,
+        productId: userCartItem.productId,
+        quantity: userCartItem.quantity,
+        price: userCartItem.price,
+        timestamp: Date.now()
+      };
+
+      cart.splice(index, 1, newCartItem);
+      resolve({ message: 'Item updated'});
+    } else {
+      reject({ request: userCartItem, message: 'Item not found'});
+    }
+    console.log(cart);
+  });
+};
+
+// Get cart items
+const getCartItems = (req) => {
+  return new Promise((resolve, reject) => {
     let cartItems = [];
     let cartObj = {};
 
@@ -248,6 +275,32 @@ const getItemsInCart = (req) => {
   });
 };
 
+// Empty cart
+const emptyCart = (req) => {
+  return new Promise((resolve, reject) => {
+    const newCart = cart.filter(({ userId }) => userId !== req.params.userId);
+    cart = [...newCart];
+
+    console.log(cart);
+    resolve({ message: 'Cart emptied' });
+  });
+};
+
+// Delete cart item
+const deleteCartItem = (req) => {
+  return new Promise((resolve, reject) => {
+    const index = cart.findIndex(({ cartId }) => cartId === req.params.cartId);
+
+    if (index !== -1) {
+      cart.splice(index, 1);
+      resolve({ message: 'Cart item deleted' });
+    } else {
+      reject({ request: req.params.cartId, message: 'Cart item not found'});
+    }
+    console.log(cart);
+  });
+};
+
 module.exports = {
   getCompanyById,
   getProducts,
@@ -259,6 +312,9 @@ module.exports = {
   getProductById,
   getProductByFilters,
   getProductByIndex,
-  postItemToCart,
-  getItemsInCart
+  addCartItem,
+  updateCartItem,
+  getCartItems,
+  emptyCart,
+  deleteCartItem
 };
