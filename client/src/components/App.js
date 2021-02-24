@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { FiShoppingCart } from "react-icons/fi";
@@ -7,18 +7,20 @@ import { FiShoppingCart } from "react-icons/fi";
 import {
   requestCartItems,
   receiveCartItems,
-  receiveCartItemsError
+  receiveCartItemsError,
 } from '../actions';
 
-import GlobalStyles from './GlobalStyles';
 import FilterSelect from './FilterSelect';
 import ProductGrid from './ProductGrid';
 import ProductDetail from './ProductDetail';
 import Cart from './Cart';
+import ThankYou from './ThankYou';
+import ErrorPage from './ErrorPage';
 
 const USER_ID = '930436bc-0220-4c66-b616-3615a5ae8801';
 
 function App() {
+  const history = useHistory();
   const dispatch = useDispatch();
   const userCart = useSelector((state) => state.userCart);
 
@@ -29,45 +31,58 @@ function App() {
       .then(res => res.json())
       .then(json => {
         if (json.status === 200) {
-          dispatch(receiveCartItems(json.data.cart));
+          dispatch(receiveCartItems(json.cart));
+        } else {
+          dispatch(receiveCartItemsError());
+          history.push({ pathname: '/error-page' });
         }
       })
-      .catch(err => dispatch(receiveCartItemsError()));
-  }, [dispatch]);
+      .catch(err => {
+        dispatch(receiveCartItemsError());
+        history.push({ pathname: '/error-page' });
+      });
+  }, [dispatch, history]);
 
   return (
-    <Router>
-      <GlobalStyles />
       <Wrapper>
         <Header>
           <div>
             <Logo>iWear</Logo>
             <Slogan>The Wearable Technology Store</Slogan>
           </div>
-          <Navigation>
-            <CartContainer>
-              <CartLink to="/cart"><FiShoppingCart /></CartLink>{userCart.cart.length !== 0 ? <CartItems>{userCart.cart.length}</CartItems> : null}
-            </CartContainer>
-          </Navigation>
+            <Navigation>
+              {userCart.status !== 'error' && userCart.status !== 'loading' ? 
+                <CartContainer>
+                  <CartLink to="/cart"><FiShoppingCart /></CartLink>{userCart.cart.length !== 0 ? <CartItems>{userCart.cart.length}</CartItems> : null}
+                </CartContainer>
+              :
+                null
+              }
+            </Navigation>
         </Header>
         <Sidebar>
-          <FilterSelect />
+          {userCart.status !== 'error' && userCart.status !== 'loading' ? <FilterSelect /> : null}
         </Sidebar>
-          <Switch>
-            <Route exact path="/">
-              <ProductGridContainer>
-                <ProductGrid />
-              </ProductGridContainer>
-            </Route>
-            <Route exact path="/product/:productId">
-              <ProductDetail userId={USER_ID} />
-            </Route>
-            <Route exact path="/cart">
-              <Cart userId={USER_ID} />
-            </Route>
-          </Switch>
+        <Switch>
+          <Route exact path="/">
+            <ProductGridContainer>
+              <ProductGrid />
+            </ProductGridContainer>
+          </Route>
+          <Route exact path="/product/:productId">
+            <ProductDetail userId={USER_ID} />
+          </Route>
+          <Route exact path="/cart">
+            <Cart userId={USER_ID} />
+          </Route>
+          <Route exact path="/thankyou">
+            <ThankYou />
+          </Route>
+          <Route exact path="/error-page">
+            <ErrorPage />
+          </Route>
+        </Switch>
       </Wrapper>
-    </Router>
   );
 }
 

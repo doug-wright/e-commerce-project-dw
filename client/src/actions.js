@@ -151,3 +151,34 @@ export const emptyCart = () => ({
 export const emptyCartError = () => ({
   type: 'EMPTY_CART_ERROR'
 });
+
+export const requestProcessCart = () => ({
+  type: 'REQUEST_PROCESS_CART '
+});
+
+export const processCart = () => ({
+  type: 'PROCESS_CART'
+});
+
+export const processCartError = () => ({
+  type: 'PROCESS_CART_ERROR'
+});
+
+// Checkout actions
+export const settingCheckoutFields = () => ({
+  type: 'SETTING_CHECKOUT_FIELDS'
+});
+
+export const setCheckoutFields = (checkout) => ({
+  type: 'SET_CHECKOUT_FIELDS',
+  checkout
+});
+
+export const setCheckoutFieldsError = (message) => ({
+  type: 'SET_CHECKOUT_FIELDS_ERROR',
+  message
+});
+
+export const resetCheckoutFields = () => ({
+  type: 'RESET_CHECKOUT_FIELDS'
+});

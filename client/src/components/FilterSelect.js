@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Fragment } from 'react';
+import React, { useEffect, Fragment } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
@@ -18,6 +18,7 @@ import {
 } from '../actions';
 
 const FilterSelect = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const categoryFilter = useSelector((state) => state.categoryFilter);
   const locationFilter = useSelector((state) => state.locationFilter);
@@ -27,16 +28,35 @@ const FilterSelect = () => {
     dispatch(requestCategoryFilters());
     fetch('/api/v1/product/categories')
       .then((res) => res.json())
-      .then((json) => dispatch(receiveCategoryFilters(json.data.categories)))
-      .catch((err) => dispatch(receiveCategoryFiltersError()));
-
+      .then((json) => {
+        if (json.status === 200) {
+          dispatch(receiveCategoryFilters(json.categories));
+        } else {
+          dispatch(receiveCategoryFiltersError());
+          history.push({ pathname: '/error-page' });
+        }
+      })
+      .catch((err) => {
+        dispatch(receiveCategoryFiltersError());
+        history.push({ pathname: '/error-page' });
+      });
     // Fetch body locations
     dispatch(requestLocationFilters());
     fetch('/api/v1/product/locations')
       .then((res) => res.json())
-      .then((json) => dispatch(receiveLocationFilters(json.data.bodyLocations)))
-      .catch((err) => dispatch(receiveLocationFiltersError()));
-  }, [dispatch]);
+      .then((json) => {
+        if (json.status === 200) {
+          dispatch(receiveLocationFilters(json.bodyLocations));
+        } else {
+          dispatch(receiveLocationFiltersError());
+          history.push({ pathname: '/error-page' });
+        }
+      })
+      .catch((err) => {
+        dispatch(receiveLocationFiltersError());
+        history.push({ pathname: '/error-page' });
+      });
+  }, [dispatch, history]);
 
   const handleApplyFilters = () => {
     let categories = '';
@@ -77,13 +97,13 @@ const FilterSelect = () => {
     dispatch(setUrl('/api/v1/product/index/', ''));
   };
 
-  if (categoryFilter.status === 'loading' || locationFilter.status === 'loading') {
+  if (categoryFilter.status !== 'idle' || locationFilter.status !== 'idle') {
     return <>Loading...</>;
   } else {
     return (
       <>
         <FilterTitle>Filters</FilterTitle>
-        <p>Categories:</p>
+        <p>Filter by category:</p>
         {Object.keys(categoryFilter.filters).map((filterName, index) => {
           const checked = categoryFilter.filters[filterName] ? true : false;
 
@@ -102,7 +122,7 @@ const FilterSelect = () => {
             </Fragment>
           );
         })}
-        <p>Locations:</p>
+        <p>OR/then by body location:</p>
         {Object.keys(locationFilter.filters).map((filterName, index) => {
           const checked = locationFilter.filters[filterName] ? true : false;
 
@@ -121,8 +141,10 @@ const FilterSelect = () => {
             </Fragment>
           );
         })}
-        <button onClick={handleApplyFilters}>Apply Filters</button>
-        <button onClick={handleClearFilters}>Clear Filters</button>
+        <FilterOptions>
+          <Button onClick={handleApplyFilters}>Apply Filters</Button>
+          <Button onClick={handleClearFilters}>Clear Filters</Button>
+        </FilterOptions>
       </>
     );
   }
@@ -148,6 +170,26 @@ const Filter = styled.div`
 
 const Input = styled.input`
   margin-right: 5px;
+`;
+
+
+const FilterOptions = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+`;
+
+const Button = styled.button`
+  padding: 5px 15px;
+  /* font-size: 1rem; */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #8265a7;
+  cursor: pointer;
 `;
 
 export default FilterSelect;

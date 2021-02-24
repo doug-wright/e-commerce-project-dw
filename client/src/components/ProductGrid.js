@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
@@ -14,6 +15,7 @@ import {
 } from '../actions';
 
 const ProductGrid = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const {
     url,
@@ -29,46 +31,63 @@ const ProductGrid = () => {
     dispatch(requestProductsSummary());
     fetch(url + index + '/' + itemsPerPage + queryString)
       .then((res) => res.json())
-      .then((json) => dispatch(receiveProductsSummary(json.data)))
-      .catch((err) => dispatch(receiveProductsSummaryError()));
+      .then((json) => {
+        if (json.status === 200) {
+          dispatch(receiveProductsSummary(json));
+        } else {
+          dispatch(receiveProductsSummaryError());
+          history.push({ pathname: '/error-page' });
+        }
+      })
+      .catch((err) => {
+        dispatch(receiveProductsSummaryError());
+        history.push({ pathname: '/error-page' });
+      });
     window.scrollTo(0, 0);
   },[
     url,
     index,
     queryString,
     itemsPerPage,
-    dispatch
+    dispatch,
+    history
   ]);
 
   if (status === 'loading') {
     return (
-      <>
-        Loading
-      </>
+      <Wrapper>
+        <Msg>Loading...</Msg>
+      </Wrapper>
     );
-    } else {
-      return (
-        <Wrapper>
-          <Pager>
-            <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
-            Showing products {index + 1} to{' '}
-            {(index + itemsPerPage < numProducts) ? index + itemsPerPage : numProducts} of{' '}
-            {numProducts} in total
-            <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
-          </Pager>
-          <GridContainer>
-            {products.map(product => <ProductSummary key={product._id} product={product} />)}
-          </GridContainer>
-          <Pager>
-            <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
-            Showing products {index + 1} to{' '}
-            {(index + itemsPerPage < numProducts) ? index + itemsPerPage : numProducts} of{' '}
-            {numProducts} in total
-            <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
-          </Pager>
-        </Wrapper>
-      );
-    }
+  } else if (numProducts === 0) {
+    return (
+      <Wrapper>
+        <Msg>No products matched your filter settings</Msg>
+      </Wrapper>
+    );
+  } else {
+    return (
+      <Wrapper>
+        <Pager>
+          <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
+          Showing products {index + 1} to{' '}
+          {(index + itemsPerPage < numProducts) ? index + itemsPerPage : numProducts} of{' '}
+          {numProducts} in total
+          <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
+        </Pager>
+        <GridContainer>
+          {products.map(product => <ProductSummary key={product._id} product={product} />)}
+        </GridContainer>
+        <Pager>
+          <Button onClick={() => dispatch(requestProductsBack())}><LeftArrow /></Button>
+          Showing products {index + 1} to{' '}
+          {(index + itemsPerPage < numProducts) ? index + itemsPerPage : numProducts} of{' '}
+          {numProducts} in total
+          <Button onClick={() => dispatch(requestProductsNext())}><RightArrow /></Button>
+        </Pager>
+      </Wrapper>
+    );
+  }
 };
 
 const Wrapper = styled.div`
@@ -76,6 +95,13 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+`;
+
+const Msg = styled.div`
+  text-align: center;
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+  margin-top: 20px;
 `;
 
 const Pager = styled.div`
@@ -105,6 +131,8 @@ const GridContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 1fr;
   grid-gap: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 `;
 
 export default ProductGrid;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
@@ -12,9 +13,11 @@ import {
 } from '../actions';
 
 const CartItem = ({ index }) => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const [item, setItem] = useState(null);
   const [qtyInput, setQtyInput] = useState(0);
+  const [errorMsg, setErrorMsg] = useState('');
   const { cart } = useSelector((state) => state.userCart);
 
   // Fetch product details
@@ -22,11 +25,18 @@ const CartItem = ({ index }) => {
     fetch('/api/v1/product/' + cart[index].productId)
       .then((res) => res.json())
       .then((json) => {
-        setItem(json.data.product);
-        setQtyInput(cart[index].quantity);
+        if (json.status === 200) {
+          setItem(json.product);
+          setQtyInput(cart[index].quantity);
+        } else {
+          history.push({ pathname: '/error-page' });
+        }
       })
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => {
+        console.log(err)
+        history.push({ pathname: '/error-page' });
+      });
+  }, [cart, index, history]);
 
   const handleInput = (ev) => {
     if (/^\d+$/.test(ev.target.value) && ev.target.value !== 0) {
@@ -49,16 +59,39 @@ const CartItem = ({ index }) => {
       body: JSON.stringify(updatedCartItem)
     })
       .then(res => res.json())
-      .then(json => dispatch(updateCartItem(updatedCartItem)))
-      .catch(err => dispatch(updateCartItemError));
+      .then(json => {
+        if (json.status === 200) {
+          setErrorMsg('');
+          dispatch(updateCartItem(updatedCartItem));
+        } else if (json.status === 400) {
+          setErrorMsg(json.message);
+        } else {
+          dispatch(updateCartItemError());
+          history.push({ pathname: '/error-page' });
+        }
+      })
+      .catch(err => {
+        dispatch(updateCartItemError());
+        history.push({ pathname: '/error-page' });
+      });
   }
 
   const handleCartDeleteItem = (cartId) => {
     dispatch(requestDeleteCartItem());
     fetch('/api/v1/cart/' + cartId, { method: 'PATCH' })
       .then(res => res.json())
-      .then(json => dispatch(deleteCartItem(cartId)))
-      .catch(err => dispatch(deleteCartItemError));
+      .then(json => {
+        if (json.status === 200) {
+          dispatch(deleteCartItem(cartId));
+        } else {
+          dispatch(deleteCartItemError());
+          history.push({ pathname: '/error-page' });
+        }
+      })
+      .catch(err => {
+        dispatch(deleteCartItemError());
+        history.push({ pathname: '/error-page' });
+      });
   };
 
   if (item !== null) {
@@ -72,6 +105,11 @@ const CartItem = ({ index }) => {
             <label htmlFor={cart[index].cartId}>Quantity: </label>
             <Input type="text" name="qty" id={cart[index].cartId} maxLength="2" onChange={handleInput} defaultValue={cart[index].quantity} />
             <UpdateQtyBtn onClick={() => handleCartUpdate(index, qtyInput)}>Update quantity</UpdateQtyBtn>
+          </p>
+          <p>
+            <ErrorMsg>
+              {errorMsg}
+            </ErrorMsg>
           </p>
         </Details>
       </Wrapper>
@@ -127,6 +165,11 @@ const UpdateQtyBtn = styled.button`
 const Input = styled.input`
   width: 25px;
   margin-right: 10px;
+`;
+
+const ErrorMsg = styled.span`
+  font-size: 0.8rem;
+  color: red;
 `;
 
 export default CartItem;

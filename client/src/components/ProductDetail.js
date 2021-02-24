@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
@@ -17,6 +17,7 @@ import {
 } from '../actions';
 
 const ProductDetail = ({ userId }) => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const { product, status } = useSelector((state) => state.productDetail);
   const { cart } = useSelector((state) => state.userCart);
@@ -27,11 +28,19 @@ const ProductDetail = ({ userId }) => {
     fetch('/api/v1/product/' + productId)
       .then((res) => res.json())
       .then((json) => {
-        dispatch(receiveProductDetail(json.data.product));
-        window.scrollTo(0, 0);
+        if (json.status === 200) {
+          dispatch(receiveProductDetail(json.product));
+          window.scrollTo(0, 0);
+        } else {
+          dispatch(receiveProductDetailError());
+          history.push({ pathname: '/error-page' });
+        }
       })
-      .catch((err) => dispatch(receiveProductDetailError()));
-  },[dispatch, productId]);
+      .catch((err) => {
+        dispatch(receiveProductDetailError());
+        history.push({ pathname: '/error-page' })
+      });
+  },[dispatch, productId, history]);
 
   const handleAddToCart = () => {
     // Check if product is already in cart
@@ -53,8 +62,18 @@ const ProductDetail = ({ userId }) => {
         body: JSON.stringify(newCartItem)
       })
         .then(res => res.json())
-        .then(json => dispatch(addCartItem(newCartItem)))
-        .catch(err => dispatch(addCartItemError));
+        .then(json => {
+          if (json.status === 201) {
+            dispatch(addCartItem(newCartItem));
+          } else {
+            dispatch(addCartItemError());
+            history.push({ pathname: '/error-page' });
+          }
+        })
+        .catch(err => {
+          dispatch(addCartItemError())
+          history.push({ pathname: '/error-page' });
+        });
     } else {
       // Add one to existing quantity
       const updatedCartItem = {
@@ -71,8 +90,18 @@ const ProductDetail = ({ userId }) => {
         body: JSON.stringify(updatedCartItem)
       })
         .then(res => res.json())
-        .then(json => dispatch(updateCartItem(updatedCartItem)))
-        .catch(err => dispatch(updateCartItemError));
+        .then(json => {
+          if (json.status === 200) {
+            dispatch(updateCartItem(updatedCartItem));
+          } else {
+            dispatch(updateCartItemError());
+            history.push({ pathname: '/error-page' });
+          }
+        })
+        .catch(err => {
+          dispatch(updateCartItemError());
+          history.push({ pathname: '/error-page' });
+        });
     }
   };
 
@@ -120,7 +149,7 @@ const Details = styled.div`
 
 const ProductStock = styled.p`
   font-weight: bold;
-  color: ${props => props.stock !==0 ? 'green' : 'red'}
+  color: ${props => props.stock > 0 ? 'green' : 'red'}
 `;
 
 const Button = styled.button`

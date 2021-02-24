@@ -130,6 +130,26 @@ const cartReducer = (state = initialState, action) => {
       };
     }
 
+    case 'REQUEST_PROCESS_CART': {
+      return {
+        ...state,
+        status: 'processing'
+      };
+    }
+
+    case 'PROCESS_CART': {
+      return {
+        ...initialState
+      };
+    }
+
+    case 'PROCESS_CART_ERROR': {
+      return {
+        ...state,
+        status: 'error'
+      };
+    }
+
     default: {
       return state;
     }

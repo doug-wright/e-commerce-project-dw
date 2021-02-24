@@ -1,43 +1,9 @@
 'use strict';
 
-const { v4: uuidv4 } = require('uuid');
-
 const companies = require('./data/companies.json');
 const products = require('./data/items.json');
 
 let cart = [];
-
-// Get company by id
-const getCompanyById = (id) => {
-  return new Promise((resolve, reject) => {
-    const company = companies.filter(company => company._id === Number(id));
-
-    if (company.length > 0) {
-      resolve({ company: company[0] });
-    } else {
-      reject({ request: id, message: 'Company not found' });
-    }
-  });
-};
-
-// Get all products
-const getProducts = () => {
-  return new Promise((resolve, reject) => {
-    resolve(products.map(product => ({
-      name: product.name,
-      price: product.price,
-      imageSrc: product.imageSrc,
-      numInStock: product.numInStock
-    })));
-  });
-};
-
-// Get product count
-const getNumProducts = () => {
-  return new Promise((resolve, reject) => {
-    resolve({ numProducts: products.length });
-  });
-};
 
 // Get product categories
 const getProductCategories = () => {
@@ -50,20 +16,7 @@ const getProductCategories = () => {
       }
     });
 
-    resolve({ categories });
-  });
-};
-
-// Get product by category
-const getProductsByCategory = (category) => {
-  return new Promise((resolve, reject) => {
-    const product = products.filter(product => product.category.toLocaleLowerCase() === category.toLocaleLowerCase());
-
-    if (product.length > 0) {
-      resolve({ products: product });
-    } else {
-      reject({ request: category, message: 'No products found by that category' });
-    }
+    resolve({ status: 200, categories });
   });
 };
 
@@ -78,20 +31,7 @@ const getProductBodyLocations = () => {
       }
     });
 
-    resolve({ bodyLocations });
-  });
-};
-
-// Get products by body location
-const getProductsByBodyLocation = (bodyLocation) => {
-  return new Promise((resolve, reject) => {
-    const product = products.filter(product => product.body_location.toLocaleLowerCase() === bodyLocation.toLocaleLowerCase());
-
-    if (product.length > 0) {
-      resolve({ products: product });
-    } else {
-      reject({ request: bodyLocation, message: 'No products found by that body location' });
-    }
+    resolve({ status: 200, bodyLocations });
   });
 };
 
@@ -99,12 +39,12 @@ const getProductsByBodyLocation = (bodyLocation) => {
 const getProductById = (id) => {
   return new Promise((resolve, reject) => {
     const product = products.filter(product => product._id === Number(id));
-    const company = companies.filter(company => company._id === product[0].companyId);
 
     if (product.length > 0) {
-      resolve({ product: { ...product[0], company: company[0] }});
+      const company = companies.filter(company => company._id === product[0].companyId);
+      resolve({ status: 200, product: { ...product[0], company: company[0] }});
     } else {
-      reject({ request: id, message: 'Product not found' });
+      reject({ status: 400, request: id, message: 'Product not found' });
     }
   });
 };
@@ -128,44 +68,74 @@ const getProductByFilters = (fromIndex, quantity, queryString) => {
       locationsArray.pop();
     }
 
-    for (let i = 0; i < products.length; i++) {
-      if (categoriesArray.includes(products[i].category) && locationsArray.includes(products[i].body_location)) {
-        productsArray.push(products[i]);
-      } else if (categoriesArray.includes(products[i].category) || locationsArray.includes(products[i].body_location)) {
-        productsArray.push(products[i]);
+    // Filter by category
+    if (categoriesArray.length > 0 && locationsArray.length === 0) {
+      for (let i = 0; i < products.length; i++) {
+        if (categoriesArray.includes(products[i].category)) {
+          productsArray.push(products[i]);
+        }
+      }
+    }
+
+    // Filter by body location
+    if (categoriesArray.length === 0 && locationsArray.length > 0){
+      for (let i = 0; i < products.length; i++) {
+        if (locationsArray.includes(products[i].body_location)) {
+          productsArray.push(products[i]);
+        }
+      }
+    }
+
+    // Filter by both
+    if (categoriesArray.length > 0 && locationsArray.length > 0){
+      let interArray = [];
+
+      for (let i = 0; i < products.length; i++) {
+        if (categoriesArray.includes(products[i].category)) {
+          interArray.push(products[i]);
+        }
+      }
+
+      for (let i = 0; i < interArray.length; i++) {
+        if (locationsArray.includes(interArray[i].body_location)) {
+          productsArray.push(interArray[i]);
+        }
       }
     }
 
     const numProducts = productsArray.length;
 
-    if (fromIndex < 0) {
-      reject({ request: fromIndex, message: 'invalid index' });
-    }
+    if (numProducts === 0) {
+      resolve({ status: 200, products: [], numProducts: 0 });
+    } else {
+      if (fromIndex < 0) {
+        reject({ status: 400, request: fromIndex, message: 'Invalid index' });
+      }
 
-    if (fromIndex > numProducts - 1) {
-      reject({ request: fromIndex, message: 'index exceeds number of products' });
-    }
+      if (fromIndex > numProducts - 1) {
+        reject({ status: 400, request: fromIndex, message: 'Index exceeds number of products' });
+      }
 
-    const productRange = [];
-    let toIndex = fromIndex + quantity - 1;
+      let productRange = [];
+      let toIndex = fromIndex + quantity - 1;
   
-    if (toIndex >= numProducts) {
-      toIndex = numProducts -1;
-    }
+      if (toIndex >= numProducts) {
+        toIndex = numProducts -1;
+      }
 
-    for (let i = fromIndex; i <= toIndex; i++) {
-      productRange.push({
-        _id: productsArray[i]._id,
-        name: productsArray[i].name,
-        price: productsArray[i].price,
-        imageSrc: productsArray[i].imageSrc,
-        numInStock: productsArray[i].numInStock
-      });
-    }
+      for (let i = fromIndex; i <= toIndex; i++) {
+        productRange.push({
+          _id: productsArray[i]._id,
+          name: productsArray[i].name,
+          price: productsArray[i].price,
+          imageSrc: productsArray[i].imageSrc,
+          numInStock: productsArray[i].numInStock
+        });
+      }
 
-    resolve({ products: productRange, numProducts });
+      resolve({ status: 200, products: productRange, numProducts });
+    }
   });
-
 };
 
 // Get product by index
@@ -174,11 +144,11 @@ const getProductByIndex = (fromIndex, quantity) => {
     const numProducts = products.length;
 
     if (fromIndex < 0) {
-      reject({ request: fromIndex, message: 'invalid index' });
+      reject({ status: 400, request: fromIndex, message: 'Invalid index' });
     }
 
     if (fromIndex > numProducts - 1) {
-      reject({ request: fromIndex, message: 'index exceeds number of products' });
+      reject({ status: 400, request: fromIndex, message: 'Index exceeds number of products' });
     }
 
     const productRange = [];
@@ -198,7 +168,7 @@ const getProductByIndex = (fromIndex, quantity) => {
       });
     }
 
-    resolve({ products: productRange, numProducts });
+    resolve({ status: 200, products: productRange, numProducts });
   });
 };
 
@@ -206,8 +176,6 @@ const getProductByIndex = (fromIndex, quantity) => {
 const addCartItem = (req) => {
   return new Promise((resolve, reject) => {
     const userCartItem = req.body;
-    console.log(userCartItem);
-
     const newCartItem = {
       cartId: userCartItem.cartId,
       userId: req.params.userId,
@@ -218,8 +186,7 @@ const addCartItem = (req) => {
     };
 
     cart.push(newCartItem);
-    console.log(cart);
-    resolve({ message: 'Item added'});
+    resolve({ status: 201, message: 'Cart item added'});
   });
 };
 
@@ -228,24 +195,29 @@ const updateCartItem = (req) => {
   return new Promise((resolve, reject) => {
     const userCartItem = req.body;
     const index = cart.findIndex(({ cartId }) => cartId === req.params.cartId);
-    console.log(userCartItem);
 
     if (index !== -1) {
-      const newCartItem = {
-        cartId: cart[index].cartId,
-        userId: cart[index].userId,
-        productId: userCartItem.productId,
-        quantity: userCartItem.quantity,
-        price: userCartItem.price,
-        timestamp: Date.now()
-      };
+      const productIndex = products.findIndex(({ _id }) => _id === cart[index].productId);
 
-      cart.splice(index, 1, newCartItem);
-      resolve({ message: 'Item updated'});
+      if (products[productIndex].numInStock >= userCartItem.quantity) {
+        const newCartItem = {
+          cartId: cart[index].cartId,
+          userId: cart[index].userId,
+          productId: userCartItem.productId,
+          quantity: userCartItem.quantity,
+          price: userCartItem.price,
+          timestamp: Date.now()
+        };
+
+        cart.splice(index, 1, newCartItem);
+        resolve({ status: 200, message: 'Cart item updated'});
+      } else {
+        // Reject exceeded quantity available
+        reject({ status: 400, request: userCartItem, message: 'Requested quantity exceeds available quantity'});
+      }
     } else {
-      reject({ request: userCartItem, message: 'Item not found'});
+      reject({ status: 400, request: userCartItem, message: 'Cart item not found'});
     }
-    console.log(cart);
   });
 };
 
@@ -268,9 +240,10 @@ const getCartItems = (req) => {
     }
 
     if (cartItems.length > 0) {
-      resolve({ cart: cartItems });
+      resolve({ status: 200, cart: cartItems });
     } else {
-      reject({ request: req.params.userId, message: 'Cart empty or user does not exist' });
+      // reject({ status: 400, request: req.params.userId, message: 'Cart empty or user does not exist' });
+      resolve({ status: 200, cart: [] })
     }
   });
 };
@@ -279,10 +252,9 @@ const getCartItems = (req) => {
 const emptyCart = (req) => {
   return new Promise((resolve, reject) => {
     const newCart = cart.filter(({ userId }) => userId !== req.params.userId);
+    
     cart = [...newCart];
-
-    console.log(cart);
-    resolve({ message: 'Cart emptied' });
+    resolve({ status: 200, message: 'Cart emptied' });
   });
 };
 
@@ -293,22 +265,37 @@ const deleteCartItem = (req) => {
 
     if (index !== -1) {
       cart.splice(index, 1);
-      resolve({ message: 'Cart item deleted' });
+      resolve({ status: 200, message: 'Cart item deleted' });
     } else {
-      reject({ request: req.params.cartId, message: 'Cart item not found'});
+      reject({ status: 400, request: req.params.cartId, message: 'Cart item not found'});
     }
-    console.log(cart);
+  });
+};
+
+// Process cart
+const processCart = (req) => {
+  return new Promise((resolve, reject) => {
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].userId = req.params.userId) {
+        const index = products.findIndex(({ _id }) => _id === cart[i].productId);
+        const newQuantity = products[index].numInStock - cart[i].quantity;
+        const newProduct = { ...products[index], numInStock: newQuantity };
+
+        products.splice(index, 1, newProduct);
+      }
+    }
+
+    // Empty user cart
+    const newCart = cart.filter(({ userId }) => userId !== req.params.userId);
+    
+    cart = [...newCart];
+    resolve({ status: 200, message: 'Cart processed' });
   });
 };
 
 module.exports = {
-  getCompanyById,
-  getProducts,
-  getNumProducts,
   getProductCategories,
-  getProductsByCategory,
   getProductBodyLocations,
-  getProductsByBodyLocation,
   getProductById,
   getProductByFilters,
   getProductByIndex,
@@ -316,5 +303,6 @@ module.exports = {
   updateCartItem,
   getCartItems,
   emptyCart,
-  deleteCartItem
+  deleteCartItem,
+  processCart
 };
