@@ -46,7 +46,7 @@ const categoryFilterReducer = (state = initialState, action) => {
       return {
         ...state,
         filters: {...state.filters, [action.filterName]: filterStatus},
-        status: 'error'
+        status: 'idle'
       };
     }
 
