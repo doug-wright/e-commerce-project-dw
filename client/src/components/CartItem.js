@@ -100,7 +100,7 @@ const CartItem = ({ index }) => {
         <Img src={item.imageSrc} />
         <Details>
           <RemoveButton onClick={() => handleCartDeleteItem(cart[index].cartId)}>x</RemoveButton>{item.name}
-          <p>${cart[index].price}</p>
+          <p>${cart[index].price} <Stock>({item.numInStock} in stock)</Stock></p>
           <p>
             <label htmlFor={cart[index].cartId}>Quantity: </label>
             <Input type="text" name="qty" id={cart[index].cartId} maxLength="2" onChange={handleInput} defaultValue={cart[index].quantity} />
@@ -135,6 +135,10 @@ const Img = styled.img`
 
 const Details = styled.div`
   padding-left: 10px;
+`;
+
+const Stock = styled.span`
+  font-size: 0.8rem;
 `;
 
 const RemoveButton = styled.button`
